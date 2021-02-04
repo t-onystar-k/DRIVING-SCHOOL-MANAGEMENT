@@ -27,18 +27,35 @@ The landing page will have 2 options for login. One for individuals and another 
   * Prescription
 # Databases Required 
 ###### 1. IndividualUsers
-  * Details about all individual users like uid, name, phone no etc
-###### 2. UserLogin
+  * Details about all individual users.
+  * Coulumns:
+    * uid
+    * name
+    * phoneNo
+###### 2. UserAuth
   * Username,password pairs for authentication
+  * Coulumns:
+    * Username
+    * password
 ###### 3. Hospitals
-  * Details of all hospitals in the system like hospital Id, hosp. Name, address etc
-###### 4. HospitalLogin
+  * Details of all hospitals in the system
+  * Columns:
+    * HospitalId
+    * HospitalName
+    * Adress
+###### 4. HospitalAuth
   * Hospital Id , password pair for authentication
+  * Columns:
+    * HospitalId
+    * Password
 ###### 5. Doctors
-  * doctorId, Name, Hospital
+  * details of doctors belonging to diff hospitals.
+    * doctorId
+    * Name
+    * Hospital (currently working)
 ###### 6. PatientVisitHistory
   * Table to hold the visiting details of individuals
-  * Expected columns:
+  * Columns:
     * UserId
     * Hospital-Id
     * Date of visit
