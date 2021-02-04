@@ -50,6 +50,7 @@ The landing page will have 2 options for login. One for individuals and another 
     * Password
 ###### 5. Doctors
   * details of doctors belonging to diff hospitals.
+  * Columns
     * doctorId
     * Name
     * Hospital (currently working)
