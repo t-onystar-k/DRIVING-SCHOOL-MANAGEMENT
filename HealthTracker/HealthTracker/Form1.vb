@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class Form1
     Dim LoginIndex As Integer
 
@@ -24,6 +25,8 @@ Public Class Form1
         Dim UserId, Password, AuthPass As String
 
         UserId = TextBox1.Text
+
+
         Password = TextBox2.Text
 
         If LoginIndex = 1 Then
@@ -45,7 +48,11 @@ Public Class Form1
             dr1.Close()
 
             If Password = AuthPass Then
+
+                Form2.userId = UserId 'to pass userid to form2
                 Form2.Show()
+
+
             Else
                 Label4.Visible = True
             End If
@@ -71,12 +78,17 @@ Public Class Form1
             dr2.Close()
 
             If Password = AuthPass Then
+
+                Form3.userId = UserId 'to pass userid to form2
                 Form3.Show()
+
             Else
                 Label4.Visible = True
             End If
 
             con.Close()
         End If
+
+
     End Sub
 End Class
