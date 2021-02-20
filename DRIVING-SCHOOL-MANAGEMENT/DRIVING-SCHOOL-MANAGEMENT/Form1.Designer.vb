@@ -28,8 +28,8 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Checkbox1 = New System.Windows.Forms.RadioButton()
+        Me.Checkbox2 = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -44,6 +44,7 @@ Partial Class Form1
         '
         Me.TextBox2.Location = New System.Drawing.Point(154, 198)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
         Me.TextBox2.TabIndex = 1
         '
@@ -83,27 +84,27 @@ Partial Class Form1
         Me.Button2.Text = "REGISTER"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'Checkbox1
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(66, 90)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(75, 17)
-        Me.RadioButton1.TabIndex = 6
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Individuals"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Checkbox1.AutoSize = True
+        Me.Checkbox1.Location = New System.Drawing.Point(66, 90)
+        Me.Checkbox1.Name = "Checkbox1"
+        Me.Checkbox1.Size = New System.Drawing.Size(75, 17)
+        Me.Checkbox1.TabIndex = 6
+        Me.Checkbox1.TabStop = True
+        Me.Checkbox1.Text = "Individuals"
+        Me.Checkbox1.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'Checkbox2
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(236, 90)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(54, 17)
-        Me.RadioButton2.TabIndex = 7
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Admin"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.Checkbox2.AutoSize = True
+        Me.Checkbox2.Location = New System.Drawing.Point(236, 90)
+        Me.Checkbox2.Name = "Checkbox2"
+        Me.Checkbox2.Size = New System.Drawing.Size(54, 17)
+        Me.Checkbox2.TabIndex = 7
+        Me.Checkbox2.TabStop = True
+        Me.Checkbox2.Text = "Admin"
+        Me.Checkbox2.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -120,8 +121,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(566, 546)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.Checkbox2)
+        Me.Controls.Add(Me.Checkbox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
@@ -141,7 +142,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents Checkbox1 As RadioButton
+    Friend WithEvents Checkbox2 As RadioButton
     Friend WithEvents Label3 As Label
 End Class
