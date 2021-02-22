@@ -2,7 +2,6 @@
 Public Class Form1
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
-
     Private Sub Checkbox1_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox1.CheckedChanged
         Label1.Text = "USERNAME"
         Label2.Text = "PASSWORD"
@@ -15,6 +14,7 @@ Public Class Form1
     Private Sub Checkbox2_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox2.CheckedChanged
         Label1.Text = "USERNAME"
         Label2.Text = "PASSWORD"
+
         Label3.Visible = False
         Button2.Visible = False
 
@@ -37,5 +37,10 @@ Public Class Form1
         Else
             MessageBox.Show("Login succesful")
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form2.Show()
+
     End Sub
 End Class
