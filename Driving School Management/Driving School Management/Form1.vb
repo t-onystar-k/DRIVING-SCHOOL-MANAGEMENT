@@ -21,7 +21,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim constring As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\sem 4 project\Driving School Management\Driving School Management\Database1.mdf;Integrated Security=True"
+        Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=E:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
         con = New SqlConnection(constring)
         con.Open()
         cmd.Connection = con
@@ -47,4 +47,6 @@ Public Class Form1
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Form3.Show()
     End Sub
+
+
 End Class
