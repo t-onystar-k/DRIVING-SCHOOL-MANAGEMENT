@@ -15,3 +15,7 @@ E:\sem 4 project\Driving School Management\Driving School Management\obj\Debug\D
 E:\sem 4 project\Driving School Management\Driving School Management\obj\Debug\Driving School Management.exe
 E:\sem 4 project\Driving School Management\Driving School Management\obj\Debug\Driving School Management.xml
 E:\sem 4 project\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb
+C:\Users\Bobin\Desktop\Vb.Net Project\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\bin\Debug\Driving School Management.exe.config
+C:\Users\Bobin\Desktop\Vb.Net Project\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.exe
+C:\Users\Bobin\Desktop\Vb.Net Project\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.xml
+C:\Users\Bobin\Desktop\Vb.Net Project\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb
