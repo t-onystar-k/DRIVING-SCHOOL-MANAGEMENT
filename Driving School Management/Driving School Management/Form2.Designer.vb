@@ -59,6 +59,10 @@ Partial Class Form2
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -257,7 +261,8 @@ Partial Class Form2
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(537, 12)
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.PictureBox1.Location = New System.Drawing.Point(504, 11)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 120)
         Me.PictureBox1.TabIndex = 6
@@ -409,11 +414,33 @@ Partial Class Form2
         Me.Button5.Text = "RESET"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(162, 83)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(192, 20)
+        Me.TextBox13.TabIndex = 36
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(53, 86)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(81, 13)
+        Me.Label14.TabIndex = 37
+        Me.Label14.Text = "Aadhar Number"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(672, 684)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.TextBox13)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button4)
@@ -433,6 +460,7 @@ Partial Class Form2
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -473,4 +501,8 @@ Partial Class Form2
     Friend WithEvents Button4 As Button
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents Label14 As Label
 End Class
