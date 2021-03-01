@@ -43,6 +43,8 @@ Partial Class Form2
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -157,7 +159,7 @@ Partial Class Form2
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(529, 19)
+        Me.TextBox7.Location = New System.Drawing.Point(526, 19)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(64, 20)
         Me.TextBox7.TabIndex = 10
@@ -227,7 +229,7 @@ Partial Class Form2
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(205, 22)
+        Me.Label9.Location = New System.Drawing.Point(148, 22)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(32, 13)
         Me.Label9.TabIndex = 17
@@ -237,18 +239,20 @@ Partial Class Form2
         '
         Me.TextBox8.Location = New System.Drawing.Point(81, 19)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(107, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(54, 20)
         Me.TextBox8.TabIndex = 18
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(247, 19)
+        Me.TextBox9.Location = New System.Drawing.Point(186, 19)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(349, 20)
+        Me.TextBox9.Size = New System.Drawing.Size(203, 20)
         Me.TextBox9.TabIndex = 19
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.TextBox14)
+        Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.TextBox9)
         Me.GroupBox3.Controls.Add(Me.TextBox8)
         Me.GroupBox3.Controls.Add(Me.Label9)
@@ -258,6 +262,22 @@ Partial Class Form2
         Me.GroupBox3.Size = New System.Drawing.Size(602, 50)
         Me.GroupBox3.TabIndex = 20
         Me.GroupBox3.TabStop = False
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(445, 19)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(147, 20)
+        Me.TextBox14.TabIndex = 21
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(401, 22)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(38, 13)
+        Me.Label15.TabIndex = 20
+        Me.Label15.Text = "Phone"
         '
         'PictureBox1
         '
@@ -300,6 +320,7 @@ Partial Class Form2
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(357, 20)
         Me.TextBox11.TabIndex = 25
+        Me.TextBox11.Visible = False
         '
         'Button1
         '
@@ -349,6 +370,7 @@ Partial Class Form2
         Me.Label12.Size = New System.Drawing.Size(77, 13)
         Me.Label12.TabIndex = 30
         Me.Label12.Text = "Eye Test result"
+        Me.Label12.Visible = False
         '
         'Label13
         '
@@ -374,6 +396,7 @@ Partial Class Form2
         Me.Button3.TabIndex = 33
         Me.Button3.Text = "OPEN"
         Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
         '
         'Button4
         '
@@ -505,4 +528,6 @@ Partial Class Form2
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents Label15 As Label
 End Class

@@ -13,13 +13,22 @@ Public Class Form2
         End If
 
     End Sub
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim OpenFileDialog1 As New OpenFileDialog
+        OpenFileDialog1.InitialDirectory = "D:\"
+        OpenFileDialog1.RestoreDirectory = True
+        OpenFileDialog1.ShowDialog()
+        If OpenFileDialog1.FileName.Length = 0 Then
+        Else
+            TextBox10.Text = System.IO.Path.GetFullPath(OpenFileDialog1.FileName)
+        End If
+    End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
         con = New SqlConnection(constring)
         con.Open()
         cmd.Connection = con
-        cmd.CommandText = "INSERT INTO Reg(uid,fname,mname,lname,f_ad,m_ad,l_ad,pin)values(@uid,@fname,@mname,@lname,@f_ad,@m_ad,@l_ad,@pin)"
+        cmd.CommandText = "INSERT INTO Reg(uid,fname,mname,lname,f_ad,m_ad,l_ad,pin,a_pic,b_c,d_c,phone,email,blood)values(@uid,@fname,@mname,@lname,@f_ad,@m_ad,@l_ad,@pin,@a_pic,@b_c,@d_c,@phone,@email,@blood)"
         Dim paramuid As New SqlParameter("@uid", SqlDbType.VarChar, 15)
         paramuid.Value = TextBox13.Text
         Dim paramfname As New SqlParameter("@fname", SqlDbType.VarChar, 20)
@@ -38,6 +47,16 @@ Public Class Form2
         parampin.Value = TextBox7.Text
         Dim parama_pic As New SqlParameter("@a_pic", SqlDbType.VarChar, 230)
         parama_pic.Value = TextBox12.Text
+        Dim paramb_c As New SqlParameter("@b_c", SqlDbType.VarChar, 230)
+        paramb_c.Value = TextBox10.Text
+        Dim paramd_c As New SqlParameter("@d_c", SqlDbType.VarChar, 230)
+        paramd_c.Value = TextBox11.Text
+        Dim paramphone As New SqlParameter("@phone", SqlDbType.VarChar, 230)
+        paramphone.Value = TextBox14.Text
+        Dim paramemail As New SqlParameter("@email", SqlDbType.VarChar, 230)
+        paramemail.Value = TextBox9.Text
+        Dim paramblood As New SqlParameter("@blood", SqlDbType.VarChar, 230)
+        paramblood.Value = TextBox8.Text
 
         cmd.Parameters.Add(paramuid)
         cmd.Parameters.Add(paramfname)
@@ -48,6 +67,11 @@ Public Class Form2
         cmd.Parameters.Add(paraml_ad)
         cmd.Parameters.Add(parampin)
         cmd.Parameters.Add(parama_pic)
+        cmd.Parameters.Add(paramb_c)
+        cmd.Parameters.Add(paramd_c)
+        cmd.Parameters.Add(paramphone)
+        cmd.Parameters.Add(paramemail)
+        cmd.Parameters.Add(paramblood)
 
         Dim da As New SqlDataAdapter
         da.InsertCommand = cmd
@@ -63,5 +87,34 @@ Public Class Form2
 
     End Sub
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        TextBox1.Text = " "
+        TextBox2.Text = " "
+        TextBox3.Text = " "
+        TextBox4.Text = " "
+        TextBox5.Text = " "
+        TextBox6.Text = " "
+        TextBox7.Text = " "
+        TextBox8.Text = " "
+        TextBox9.Text = " "
+        TextBox10.Text = " "
+        TextBox11.Text = " "
+        TextBox12.Text = " "
+        TextBox13.Text = " "
+        TextBox14.Text = " "
 
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        Label12.Visible = True
+        TextBox11.Visible = True
+        Button3.Visible = True
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        Label12.Visible = False
+        TextBox11.Visible = False
+        Button3.Visible = False
+
+    End Sub
 End Class

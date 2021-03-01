@@ -11,14 +11,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Checkbox2_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox2.CheckedChanged
-        Label1.Text = "USERNAME"
-        Label2.Text = "PASSWORD"
 
-        Label3.Visible = False
-        Button2.Visible = False
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
@@ -48,5 +41,21 @@ Public Class Form1
         Form3.Show()
     End Sub
 
+    Private Sub Checkbox2_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox2.CheckedChanged
+        Label1.Text = "ADMIN ID"
+        Label2.Text = "PASSWORD"
+        Label3.Visible = False
+        Button2.Visible = False
+        Dim admin As New TextBox
+        Dim pass As New TextBox
+
+        TextBox1.Name = "admin"
+        TextBox2.Name = "pass"
+
+        If admin.Text = "Admin2021" And pass.Text = "2020_2021" Then
+            MessageBox.Show("LOGIN SUCCESFUL")
+        End If
+
+    End Sub
 
 End Class
