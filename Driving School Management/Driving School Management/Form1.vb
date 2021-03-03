@@ -8,13 +8,12 @@ Public Class Form1
         Label3.Visible = True
         Button2.Visible = True
 
-
     End Sub
 
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+        Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
         con = New SqlConnection(constring)
         con.Open()
         cmd.Connection = con
@@ -58,4 +57,7 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = "Login"
+    End Sub
 End Class

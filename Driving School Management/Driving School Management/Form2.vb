@@ -24,7 +24,7 @@ Public Class Form2
         End If
     End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+        Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
         con = New SqlConnection(constring)
         con.Open()
         cmd.Connection = con
@@ -76,7 +76,14 @@ Public Class Form2
         Dim da As New SqlDataAdapter
         da.InsertCommand = cmd
         da.InsertCommand.ExecuteNonQuery()
-        MsgBox("inserted succesfully")
+        MsgBox("Registered succesfully. Make Fee payment Now ?", MsgBoxStyle.YesNoCancel)
+
+        If MsgBoxResult.Yes Then
+            Form4.Show()
+        End If
+        If MsgBoxResult.No Or MsgBoxResult.Cancel Then
+            Me.Close()
+        End If
 
     End Sub
 
@@ -116,5 +123,9 @@ Public Class Form2
         TextBox11.Visible = False
         Button3.Visible = False
 
+    End Sub
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = "Register"
     End Sub
 End Class

@@ -28,12 +28,9 @@ Partial Class Form4
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -41,6 +38,8 @@ Partial Class Form4
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -48,7 +47,7 @@ Partial Class Form4
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 11)
+        Me.Label1.Location = New System.Drawing.Point(33, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(209, 13)
         Me.Label1.TabIndex = 0
@@ -57,7 +56,7 @@ Partial Class Form4
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(24, 27)
+        Me.CheckBox1.Location = New System.Drawing.Point(41, 32)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(90, 17)
         Me.CheckBox1.TabIndex = 1
@@ -67,7 +66,7 @@ Partial Class Form4
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(24, 50)
+        Me.CheckBox2.Location = New System.Drawing.Point(41, 55)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(90, 17)
         Me.CheckBox2.TabIndex = 2
@@ -77,7 +76,7 @@ Partial Class Form4
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(24, 73)
+        Me.CheckBox3.Location = New System.Drawing.Point(41, 78)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(67, 17)
         Me.CheckBox3.TabIndex = 3
@@ -87,7 +86,7 @@ Partial Class Form4
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(24, 96)
+        Me.CheckBox4.Location = New System.Drawing.Point(41, 101)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(176, 17)
         Me.CheckBox4.TabIndex = 4
@@ -97,23 +96,16 @@ Partial Class Form4
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(45, 142)
+        Me.Label2.Location = New System.Drawing.Point(50, 176)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 13)
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Training Amount :"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(145, 139)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.Label2.Text = "Total Fee :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 21)
+        Me.Label3.Location = New System.Drawing.Point(45, 36)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 13)
         Me.Label3.TabIndex = 7
@@ -122,64 +114,42 @@ Partial Class Form4
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(114, 46)
+        Me.RadioButton1.Location = New System.Drawing.Point(87, 62)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(75, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(110, 17)
         Me.RadioButton1.TabIndex = 8
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Debit Card"
+        Me.RadioButton1.Text = "Debit/Credit Card "
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(114, 69)
+        Me.RadioButton2.Location = New System.Drawing.Point(87, 85)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(77, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(219, 17)
         Me.RadioButton2.TabIndex = 9
         Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Credit Card"
+        Me.RadioButton2.Text = "UPI payment (GooglePay/Phone pe etc.)"
         Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(114, 92)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(84, 17)
-        Me.RadioButton3.TabIndex = 10
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Net Banking"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(114, 115)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(216, 17)
-        Me.RadioButton4.TabIndex = 11
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "UPI payment(GooglePay/Phone pe etc.)"
-        Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(162, 167)
+        Me.TextBox2.Location = New System.Drawing.Point(167, 138)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(168, 20)
         Me.TextBox2.TabIndex = 12
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(162, 205)
+        Me.TextBox3.Location = New System.Drawing.Point(167, 176)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(168, 20)
         Me.TextBox3.TabIndex = 13
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(123, 246)
+        Me.Button1.Location = New System.Drawing.Point(167, 228)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 14
@@ -189,20 +159,20 @@ Partial Class Form4
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(45, 170)
+        Me.Label4.Location = New System.Drawing.Point(45, 141)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 13)
+        Me.Label4.Size = New System.Drawing.Size(73, 13)
         Me.Label4.TabIndex = 15
-        Me.Label4.Text = "Card number"
+        Me.Label4.Text = "Card number :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(45, 208)
+        Me.Label5.Location = New System.Drawing.Point(45, 179)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(94, 13)
+        Me.Label5.Size = New System.Drawing.Size(100, 13)
         Me.Label5.TabIndex = 16
-        Me.Label5.Text = "Card Holder Name"
+        Me.Label5.Text = "Card Holder Name :"
         '
         'GroupBox1
         '
@@ -211,38 +181,55 @@ Partial Class Form4
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton4)
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(48, 251)
+        Me.GroupBox1.Location = New System.Drawing.Point(49, 240)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(455, 279)
+        Me.GroupBox1.Size = New System.Drawing.Size(420, 279)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Payment"
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.CheckBox4)
         Me.GroupBox2.Controls.Add(Me.CheckBox3)
         Me.GroupBox2.Controls.Add(Me.CheckBox2)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(48, 62)
+        Me.GroupBox2.Location = New System.Drawing.Point(49, 30)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(455, 168)
+        Me.GroupBox2.Size = New System.Drawing.Size(420, 204)
         Me.GroupBox2.TabIndex = 18
         Me.GroupBox2.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(41, 133)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Calculate"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(128, 176)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(34, 13)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Rs -/-"
         '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(627, 562)
+        Me.ClientSize = New System.Drawing.Size(523, 549)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form4"
@@ -261,12 +248,9 @@ Partial Class Form4
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button1 As Button
@@ -274,4 +258,6 @@ Partial Class Form4
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
