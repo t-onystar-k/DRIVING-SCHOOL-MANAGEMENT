@@ -28,7 +28,6 @@ Partial Class Form2
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -45,7 +44,6 @@ Partial Class Form2
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
@@ -60,36 +58,45 @@ Partial Class Form2
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(79, 18)
+        Me.TextBox1.Location = New System.Drawing.Point(66, 31)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(98, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(150, 20)
         Me.TextBox1.TabIndex = 0
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(261, 19)
+        Me.TextBox2.Location = New System.Drawing.Point(297, 31)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(99, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(119, 20)
         Me.TextBox2.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 21)
+        Me.Label1.Location = New System.Drawing.Point(5, 34)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 13)
         Me.Label1.TabIndex = 2
@@ -98,7 +105,7 @@ Partial Class Form2
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(186, 22)
+        Me.Label2.Location = New System.Drawing.Point(222, 34)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 13)
         Me.Label2.TabIndex = 3
@@ -106,35 +113,19 @@ Partial Class Form2
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(448, 19)
+        Me.TextBox3.Location = New System.Drawing.Point(486, 31)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(99, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(109, 20)
         Me.TextBox3.TabIndex = 4
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(384, 22)
+        Me.Label3.Location = New System.Drawing.Point(422, 34)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Last Name"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(30, 137)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(605, 51)
-        Me.GroupBox1.TabIndex = 6
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Name"
         '
         'TextBox4
         '
@@ -210,9 +201,9 @@ Partial Class Form2
         Me.GroupBox2.Controls.Add(Me.TextBox6)
         Me.GroupBox2.Controls.Add(Me.TextBox5)
         Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Location = New System.Drawing.Point(33, 194)
+        Me.GroupBox2.Location = New System.Drawing.Point(23, 237)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(604, 48)
+        Me.GroupBox2.Size = New System.Drawing.Size(602, 48)
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Address"
@@ -229,7 +220,7 @@ Partial Class Form2
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(148, 22)
+        Me.Label9.Location = New System.Drawing.Point(135, 22)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(32, 13)
         Me.Label9.TabIndex = 17
@@ -239,12 +230,12 @@ Partial Class Form2
         '
         Me.TextBox8.Location = New System.Drawing.Point(81, 19)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(54, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(45, 20)
         Me.TextBox8.TabIndex = 18
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(186, 19)
+        Me.TextBox9.Location = New System.Drawing.Point(173, 19)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(203, 20)
         Me.TextBox9.TabIndex = 19
@@ -257,7 +248,7 @@ Partial Class Form2
         Me.GroupBox3.Controls.Add(Me.TextBox8)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.Label8)
-        Me.GroupBox3.Location = New System.Drawing.Point(33, 248)
+        Me.GroupBox3.Location = New System.Drawing.Point(23, 291)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(602, 50)
         Me.GroupBox3.TabIndex = 20
@@ -279,44 +270,35 @@ Partial Class Form2
         Me.Label15.TabIndex = 20
         Me.Label15.Text = "Phone"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.PictureBox1.Location = New System.Drawing.Point(535, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 120)
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(13, 74)
+        Me.Label10.Location = New System.Drawing.Point(21, 69)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(84, 13)
+        Me.Label10.Size = New System.Drawing.Size(77, 13)
         Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Birth Certificate :"
+        Me.Label10.Text = "Birth Certificale"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(13, 122)
+        Me.Label11.Location = New System.Drawing.Point(10, 143)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(433, 13)
         Me.Label11.TabIndex = 22
-        Me.Label11.Text = "Do you have Doctor's certificate/Eye Test result showing your eye sights are fit " & _
+        Me.Label11.Text = "Do you have Doctor's certificate/Eye Test result showing your eye sights are fit " &
     "for driving?"
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(108, 71)
+        Me.TextBox10.Location = New System.Drawing.Point(155, 66)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(357, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(337, 20)
         Me.TextBox10.TabIndex = 24
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(108, 197)
+        Me.TextBox11.Location = New System.Drawing.Point(135, 225)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(357, 20)
         Me.TextBox11.TabIndex = 25
@@ -324,7 +306,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(483, 21)
+        Me.Button1.Location = New System.Drawing.Point(501, 21)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 26
@@ -333,7 +315,7 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(483, 68)
+        Me.Button2.Location = New System.Drawing.Point(501, 63)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 27
@@ -343,7 +325,7 @@ Partial Class Form2
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(54, 147)
+        Me.RadioButton1.Location = New System.Drawing.Point(24, 180)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(43, 17)
         Me.RadioButton1.TabIndex = 28
@@ -354,43 +336,43 @@ Partial Class Form2
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(54, 170)
+        Me.RadioButton2.Location = New System.Drawing.Point(126, 180)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(39, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton2.TabIndex = 29
         Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "No"
+        Me.RadioButton2.Text = "NO"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(13, 200)
+        Me.Label12.Location = New System.Drawing.Point(21, 227)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(83, 13)
+        Me.Label12.Size = New System.Drawing.Size(77, 13)
         Me.Label12.TabIndex = 30
-        Me.Label12.Text = "Eye Test result :"
+        Me.Label12.Text = "Eye Test result"
         Me.Label12.Visible = False
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(13, 26)
+        Me.Label13.Location = New System.Drawing.Point(21, 26)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(47, 13)
+        Me.Label13.Size = New System.Drawing.Size(41, 13)
         Me.Label13.TabIndex = 31
-        Me.Label13.Text = "Aadhar :"
+        Me.Label13.Text = "Aadhar"
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(108, 23)
+        Me.TextBox12.Location = New System.Drawing.Point(155, 26)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(357, 20)
+        Me.TextBox12.Size = New System.Drawing.Size(337, 20)
         Me.TextBox12.TabIndex = 32
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(483, 195)
+        Me.Button3.Location = New System.Drawing.Point(498, 223)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 33
@@ -400,7 +382,7 @@ Partial Class Form2
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(232, 566)
+        Me.Button4.Location = New System.Drawing.Point(165, 621)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 34
@@ -409,6 +391,9 @@ Partial Class Form2
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Button6)
+        Me.GroupBox4.Controls.Add(Me.TextBox15)
+        Me.GroupBox4.Controls.Add(Me.Label17)
         Me.GroupBox4.Controls.Add(Me.Button3)
         Me.GroupBox4.Controls.Add(Me.TextBox12)
         Me.GroupBox4.Controls.Add(Me.Label13)
@@ -421,16 +406,41 @@ Partial Class Form2
         Me.GroupBox4.Controls.Add(Me.TextBox10)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.Label10)
-        Me.GroupBox4.Location = New System.Drawing.Point(33, 304)
+        Me.GroupBox4.Location = New System.Drawing.Point(23, 347)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(602, 240)
+        Me.GroupBox4.Size = New System.Drawing.Size(602, 268)
         Me.GroupBox4.TabIndex = 35
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Documents"
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(501, 102)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 36
+        Me.Button6.Text = "OPEN"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(155, 104)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(337, 20)
+        Me.TextBox15.TabIndex = 35
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(21, 107)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(128, 13)
+        Me.Label17.TabIndex = 34
+        Me.Label17.Text = "Signature of the applicant"
+        '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(347, 566)
+        Me.Button5.Location = New System.Drawing.Point(356, 621)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 34
@@ -443,47 +453,109 @@ Partial Class Form2
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(117, 99)
+        Me.TextBox13.Location = New System.Drawing.Point(99, 57)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox13.Size = New System.Drawing.Size(139, 20)
         Me.TextBox13.TabIndex = 36
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(27, 102)
+        Me.Label14.Location = New System.Drawing.Point(9, 60)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(87, 13)
+        Me.Label14.Size = New System.Drawing.Size(81, 13)
         Me.Label14.TabIndex = 37
-        Me.Label14.Text = "Aadhar Number :"
+        Me.Label14.Text = "Aadhar Number"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Male", "Female", "Transgender"})
+        Me.ComboBox1.Location = New System.Drawing.Point(529, 57)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(63, 21)
+        Me.ComboBox1.TabIndex = 38
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(481, 60)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(42, 13)
+        Me.Label16.TabIndex = 39
+        Me.Label16.Text = "Gender"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.TextBox13)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Location = New System.Drawing.Point(23, 139)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(602, 92)
+        Me.GroupBox1.TabIndex = 40
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(261, 60)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(30, 13)
+        Me.Label18.TabIndex = 41
+        Me.Label18.Text = "DOB"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(297, 57)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(167, 20)
+        Me.DateTimePicker1.TabIndex = 40
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.PictureBox1.InitialImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(549, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 120)
+        Me.PictureBox1.TabIndex = 41
+        Me.PictureBox1.TabStop = False
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(672, 638)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TextBox13)
+        Me.ClientSize = New System.Drawing.Size(672, 684)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
         Me.Text = "Form2"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -493,7 +565,6 @@ Partial Class Form2
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox6 As TextBox
@@ -508,7 +579,6 @@ Partial Class Form2
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox10 As TextBox
@@ -530,4 +600,13 @@ Partial Class Form2
     Friend WithEvents Label14 As Label
     Friend WithEvents TextBox14 As TextBox
     Friend WithEvents Label15 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button6 As Button
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

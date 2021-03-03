@@ -31,10 +31,9 @@ Partial Class Form3
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(441, 35)
+        Me.Button1.Location = New System.Drawing.Point(475, 42)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 30)
+        Me.Button1.Size = New System.Drawing.Size(87, 21)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Submit"
         Me.Button1.UseVisualStyleBackColor = True
@@ -43,7 +42,7 @@ Partial Class Form3
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 43)
+        Me.Label1.Location = New System.Drawing.Point(35, 44)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(194, 16)
         Me.Label1.TabIndex = 1
@@ -51,9 +50,9 @@ Partial Class Form3
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(215, 42)
+        Me.TextBox1.Location = New System.Drawing.Point(265, 43)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(209, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(179, 20)
         Me.TextBox1.TabIndex = 2
         '
         'GroupBox1
@@ -63,20 +62,20 @@ Partial Class Form3
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 22)
+        Me.GroupBox1.Location = New System.Drawing.Point(47, 58)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(545, 87)
+        Me.GroupBox1.Size = New System.Drawing.Size(583, 87)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "STATUS CHECK"
         '
         'Form3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(595, 426)
+        Me.ClientSize = New System.Drawing.Size(713, 426)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.Font = New System.Drawing.Font("MS Outlook", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
         Me.Name = "Form3"
         Me.Text = "Form3"
         Me.GroupBox1.ResumeLayout(False)
