@@ -53,3 +53,7 @@ D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Manag
 D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving School Management.exe
 D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving School Management.xml
 D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\bin\Debug\Driving School Management.exe.config
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.exe
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.xml
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb

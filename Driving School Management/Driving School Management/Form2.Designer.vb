@@ -286,7 +286,7 @@ Partial Class Form2
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(433, 13)
         Me.Label11.TabIndex = 22
-        Me.Label11.Text = "Do you have Doctor's certificate/Eye Test result showing your eye sights are fit " &
+        Me.Label11.Text = "Do you have Doctor's certificate/Eye Test result showing your eye sights are fit " & _
     "for driving?"
         '
         'TextBox10

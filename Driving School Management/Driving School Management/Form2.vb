@@ -117,7 +117,13 @@ Public Class Form2
         Dim da As New SqlDataAdapter
         da.InsertCommand = cmd
         da.InsertCommand.ExecuteNonQuery()
-        MsgBox("inserted succesfully")
+        MsgBox("Registered succesfully. Make fee payment now?", MsgBoxStyle.YesNo)
+
+        If MsgBoxResult.Yes Then
+            Form4.Show()
+        Else
+            Me.Close()
+        End If
 
     End Sub
 
@@ -160,4 +166,7 @@ Public Class Form2
     End Sub
 
 
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
