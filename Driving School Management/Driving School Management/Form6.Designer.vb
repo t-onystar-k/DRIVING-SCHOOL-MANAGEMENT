@@ -30,6 +30,7 @@ Partial Class Form6
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(611, 667)
         Me.Name = "Form6"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AdminLogin"
         Me.ResumeLayout(False)
 

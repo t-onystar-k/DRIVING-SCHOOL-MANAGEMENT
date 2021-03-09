@@ -233,6 +233,7 @@ Partial Class Form4
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form4"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Payment"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

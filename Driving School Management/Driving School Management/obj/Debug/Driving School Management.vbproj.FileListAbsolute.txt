@@ -59,3 +59,16 @@ D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management
 D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb
 D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form5.resources
 D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form6.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\bin\Debug\Database0.mdf
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\bin\Debug\Database0_log.ldf
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\bin\Debug\Driving School Management.exe
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\bin\Debug\Driving School Management.pdb
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\bin\Debug\Driving School Management.xml
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form1.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form2.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form3.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form4.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form5.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form6.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Resources.resources
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.GenerateResource.Cache

@@ -32,23 +32,24 @@ Partial Class Form1
         Me.Checkbox2 = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(135, 78)
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TextBox1.Location = New System.Drawing.Point(173, 69)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
         Me.TextBox1.TabIndex = 0
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(135, 124)
+        Me.TextBox2.Location = New System.Drawing.Point(173, 115)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
@@ -57,7 +58,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 81)
+        Me.Label1.Location = New System.Drawing.Point(72, 72)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 13)
         Me.Label1.TabIndex = 2
@@ -66,7 +67,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(34, 131)
+        Me.Label2.Location = New System.Drawing.Point(72, 122)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 3
@@ -74,7 +75,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(37, 188)
+        Me.Button1.Location = New System.Drawing.Point(75, 168)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 4
@@ -83,7 +84,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(239, 188)
+        Me.Button2.Location = New System.Drawing.Point(286, 168)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 5
@@ -94,7 +95,7 @@ Partial Class Form1
         'Checkbox1
         '
         Me.Checkbox1.AutoSize = True
-        Me.Checkbox1.Location = New System.Drawing.Point(37, 29)
+        Me.Checkbox1.Location = New System.Drawing.Point(130, 19)
         Me.Checkbox1.Name = "Checkbox1"
         Me.Checkbox1.Size = New System.Drawing.Size(75, 17)
         Me.Checkbox1.TabIndex = 6
@@ -105,7 +106,7 @@ Partial Class Form1
         'Checkbox2
         '
         Me.Checkbox2.AutoSize = True
-        Me.Checkbox2.Location = New System.Drawing.Point(176, 29)
+        Me.Checkbox2.Location = New System.Drawing.Point(269, 19)
         Me.Checkbox2.Name = "Checkbox2"
         Me.Checkbox2.Size = New System.Drawing.Size(54, 17)
         Me.Checkbox2.TabIndex = 7
@@ -116,7 +117,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(150, 193)
+        Me.Label3.Location = New System.Drawing.Point(222, 173)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 13)
         Me.Label3.TabIndex = 8
@@ -142,11 +143,20 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LOGIN"
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(75, 168)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 13
+        Me.Button4.Text = "Login"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(40, 403)
+        Me.Label4.Location = New System.Drawing.Point(72, 383)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(243, 20)
         Me.Label4.TabIndex = 10
@@ -154,7 +164,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(305, 403)
+        Me.Button3.Location = New System.Drawing.Point(337, 383)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 11
@@ -165,31 +175,23 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Sitka Display", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(80, 9)
+        Me.Label5.Location = New System.Drawing.Point(63, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(366, 35)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "DRIVING SCHOOL MANAGEMENT"
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(37, 188)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 13
-        Me.Button4.Text = "Login"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(566, 546)
+        Me.ClientSize = New System.Drawing.Size(497, 546)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
