@@ -57,3 +57,5 @@ D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management
 D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.exe
 D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.xml
 D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form5.resources
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form6.resources

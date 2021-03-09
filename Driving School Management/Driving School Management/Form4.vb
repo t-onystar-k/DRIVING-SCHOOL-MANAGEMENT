@@ -9,6 +9,9 @@
             MsgBox("Please enter necessary info")
         Else
             MsgBox("Payment Successful")
+            Form1.Show()
+            Me.Close()
+
         End If
     End Sub
 
@@ -31,15 +34,17 @@
         Label6.Text = AmountPayable
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         Label4.Text = "Card Number :"
-        Label5.Show()
-        TextBox2.Show()
+        Label5.Visible = True
+        TextBox2.Visible = True
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        Label4.Text = "Upi ID (Google Pay, Phonepe etc)"
-        Label5.Hide()
-        TextBox2.Hide()
+        Label4.Text = "Upi ID"
+        Label5.Visible = False
+        TextBox2.Visible = False
     End Sub
+
+
 End Class

@@ -2,11 +2,15 @@
 Public Class Form1
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
+    Dim con1 As New SqlConnection
+    Dim cmd1 As New SqlCommand
     Private Sub Checkbox1_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox1.CheckedChanged
         Label1.Text = "USERNAME"
         Label2.Text = "PASSWORD"
         Label3.Visible = True
         Button2.Visible = True
+        Button1.Visible = True
+        Button4.Visible = False
 
 
     End Sub
@@ -25,20 +29,28 @@ Public Class Form1
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable()
         adapter.Fill(table)
-        If table.Rows.Count() = 0 Then
-            MessageBox.Show("invalid Username and Password")
-        Else
+        If table.Rows.Count() <> 0 Then
             MessageBox.Show("Login succesful")
+            Form5.Show()
+            Me.Refresh()
+            Me.Hide()
+            TextBox1.Text = ""
+            TextBox2.Text = ""
+
+
+        Else
+            MessageBox.Show("invalid Username and Password")
         End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Form2.Show()
-
+        Me.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Form3.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Checkbox2_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox2.CheckedChanged
@@ -46,16 +58,20 @@ Public Class Form1
         Label2.Text = "PASSWORD"
         Label3.Visible = False
         Button2.Visible = False
-        Dim admin As New TextBox
-        Dim pass As New TextBox
+        Button1.Visible = False
+        Button4.Visible = True
 
-        TextBox1.Name = "admin"
-        TextBox2.Name = "pass"
 
-        If admin.Text = "Admin2021" And pass.Text = "2020_2021" Then
-            MessageBox.Show("LOGIN SUCCESFUL")
-        End If
+
 
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        If TextBox1.Text = "Admin2021" And TextBox2.Text = "pass2021" Then
+            MessageBox.Show("Logged in succesfully")
+            Form6.Show()
+            Me.Hide()
+        End If
+
+    End Sub
 End Class

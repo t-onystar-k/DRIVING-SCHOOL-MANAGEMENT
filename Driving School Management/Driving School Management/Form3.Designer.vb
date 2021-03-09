@@ -77,7 +77,7 @@ Partial Class Form3
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("MS Outlook", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
         Me.Name = "Form3"
-        Me.Text = "Form3"
+        Me.Text = "Status Checking"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

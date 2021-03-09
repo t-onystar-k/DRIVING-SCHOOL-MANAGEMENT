@@ -121,6 +121,7 @@ Public Class Form2
 
         If MsgBoxResult.Yes Then
             Form4.Show()
+            Me.Hide()
         Else
             Me.Close()
         End If
@@ -162,11 +163,6 @@ Public Class Form2
         Label12.Visible = False
         TextBox11.Visible = False
         Button3.Visible = False
-
-    End Sub
-
-
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

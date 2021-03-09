@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -124,6 +125,7 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Checkbox2)
         Me.GroupBox1.Controls.Add(Me.Checkbox1)
@@ -169,6 +171,15 @@ Partial Class Form1
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "DRIVING SCHOOL MANAGEMENT"
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(37, 188)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 13
+        Me.Button4.Text = "Login"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -200,4 +211,5 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button4 As Button
 End Class

@@ -233,7 +233,7 @@ Partial Class Form4
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form4"
-        Me.Text = "Form4"
+        Me.Text = "Payment"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
