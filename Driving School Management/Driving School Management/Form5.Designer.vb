@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form5
+Partial Class form5
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -204,42 +204,5 @@ Partial Class Form5
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Panel6.Controls.Clear()
-        Me.Size = New Size(900, 750)
 
-        With Form2
-            .TopLevel = False
-            .ControlBox = False
-            Panel6.Controls.Add(Form2)
-            .BringToFront()
-            .Show()
-        End With
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Panel6.Controls.Clear()
-        Me.Size = New Size(900, 550)
-
-        With Form3
-            .TopLevel = False
-            .ControlBox = False
-            Panel6.Controls.Add(Form3)
-            .BringToFront()
-            .Show()
-        End With
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Panel6.Controls.Clear()
-        Me.Size = New Size(900, 580)
-
-        With Form4
-            .TopLevel = False
-            .ControlBox = False
-            Panel6.Controls.Add(Form4)
-            .BringToFront()
-            .Show()
-        End With
-    End Sub
 End Class
