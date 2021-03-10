@@ -120,9 +120,7 @@
     <Compile Include="Form5.Designer.vb">
       <DependentUpon>Form5.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form5.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form5.vb" />
     <Compile Include="Form6.Designer.vb">
       <DependentUpon>Form6.vb</DependentUpon>
     </Compile>

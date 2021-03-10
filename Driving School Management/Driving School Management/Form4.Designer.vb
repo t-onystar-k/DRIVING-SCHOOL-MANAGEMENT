@@ -40,8 +40,12 @@ Partial Class Form4
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -54,7 +58,7 @@ Partial Class Form4
         Me.GroupBox2.Controls.Add(Me.CheckBox2)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(26, 23)
+        Me.GroupBox2.Location = New System.Drawing.Point(67, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(420, 204)
         Me.GroupBox2.TabIndex = 22
@@ -146,9 +150,9 @@ Partial Class Form4
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(26, 233)
+        Me.GroupBox1.Location = New System.Drawing.Point(67, 222)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(420, 279)
+        Me.GroupBox1.Size = New System.Drawing.Size(420, 265)
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Payment"
@@ -225,13 +229,41 @@ Partial Class Form4
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Mode of Payment:"
         '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel2.Location = New System.Drawing.Point(616, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(67, 562)
+        Me.Panel2.TabIndex = 24
+        '
+        'Panel3
+        '
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(67, 562)
+        Me.Panel3.TabIndex = 25
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.GroupBox2)
+        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(67, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(549, 562)
+        Me.Panel1.TabIndex = 26
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 562)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(683, 562)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form4"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Payment"
@@ -239,6 +271,7 @@ Partial Class Form4
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -260,5 +293,8 @@ Partial Class Form4
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 
 End Class

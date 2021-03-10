@@ -72,11 +72,13 @@ Partial Class Form2
         Me.Label18 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -201,7 +203,7 @@ Partial Class Form2
         Me.GroupBox2.Controls.Add(Me.TextBox6)
         Me.GroupBox2.Controls.Add(Me.TextBox5)
         Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 237)
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 227)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(602, 48)
         Me.GroupBox2.TabIndex = 15
@@ -248,7 +250,7 @@ Partial Class Form2
         Me.GroupBox3.Controls.Add(Me.TextBox8)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.Label8)
-        Me.GroupBox3.Location = New System.Drawing.Point(23, 291)
+        Me.GroupBox3.Location = New System.Drawing.Point(11, 281)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(602, 50)
         Me.GroupBox3.TabIndex = 20
@@ -382,7 +384,7 @@ Partial Class Form2
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(165, 621)
+        Me.Button4.Location = New System.Drawing.Point(149, 611)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 34
@@ -406,7 +408,7 @@ Partial Class Form2
         Me.GroupBox4.Controls.Add(Me.TextBox10)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.Label10)
-        Me.GroupBox4.Location = New System.Drawing.Point(23, 347)
+        Me.GroupBox4.Location = New System.Drawing.Point(11, 337)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(602, 268)
         Me.GroupBox4.TabIndex = 35
@@ -440,7 +442,7 @@ Partial Class Form2
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(356, 621)
+        Me.Button5.Location = New System.Drawing.Point(340, 611)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 34
@@ -499,12 +501,12 @@ Partial Class Form2
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 139)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 129)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(602, 92)
         Me.GroupBox1.TabIndex = 40
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.GroupBox1.Text = "Basic Details"
         '
         'Label18
         '
@@ -526,24 +528,33 @@ Partial Class Form2
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.PictureBox1.InitialImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(549, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(515, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 120)
         Me.PictureBox1.TabIndex = 41
         Me.PictureBox1.TabStop = False
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.GroupBox2)
+        Me.Panel1.Controls.Add(Me.GroupBox3)
+        Me.Panel1.Controls.Add(Me.GroupBox4)
+        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Location = New System.Drawing.Point(23, -2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(633, 660)
+        Me.Panel1.TabIndex = 42
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(672, 684)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(683, 670)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registration"
@@ -556,6 +567,7 @@ Partial Class Form2
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -610,4 +622,5 @@ Partial Class Form2
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class
