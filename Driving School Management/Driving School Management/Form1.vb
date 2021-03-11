@@ -12,6 +12,7 @@ Public Class Form1
     Private Sub Checkbox2_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox2.CheckedChanged
         Label3.Visible = False
         Label4.Visible = False
+        TextBox1.Text = "Enter Admin ID"
     End Sub
 
 
@@ -41,8 +42,7 @@ Public Class Form1
 
             Else
                 MessageBox.Show("invalid Username and Password")
-                Me.Controls.Clear() 'removes all the controls on the form
-                InitializeComponent() 'load all the controls again
+                Application.Restart() ''restarts application because otherwise it throws error when re entering username and password
 
             End If
         Else
