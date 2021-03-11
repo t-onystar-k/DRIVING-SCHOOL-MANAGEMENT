@@ -139,7 +139,7 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 6)
+        Me.PictureBox1.Location = New System.Drawing.Point(7, 6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox1.TabIndex = 1
@@ -159,7 +159,7 @@ Partial Class Form1
         '
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(3, 6)
+        Me.PictureBox2.Location = New System.Drawing.Point(7, 6)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox2.TabIndex = 1
