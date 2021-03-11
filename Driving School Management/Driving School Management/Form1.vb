@@ -69,7 +69,7 @@ Public Class Form1
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         If TextBox1.Text = "Admin2021" And TextBox2.Text = "pass2021" Then
             MessageBox.Show("Logged in succesfully")
-            Form6.Show()
+            form6.Show()
             Me.Hide()
         End If
 
