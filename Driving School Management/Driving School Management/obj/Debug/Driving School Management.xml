@@ -6,7 +6,11 @@ DrivingSchoolManagement
 </name>
 </assembly>
 <members>
-<member name="P:Driving_School_Management.My.Resources.Resources.ResourceManager">
+<member name="T:Driving_School_Management.Database0DataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:Driving_School_Management.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -18,10 +22,6 @@ DrivingSchoolManagement
 </member><member name="T:Driving_School_Management.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="T:Driving_School_Management.Database0DataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
 </members>
