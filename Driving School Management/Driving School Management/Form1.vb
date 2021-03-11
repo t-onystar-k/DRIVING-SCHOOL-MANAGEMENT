@@ -43,7 +43,6 @@ Public Class Form1
             Else
                 MessageBox.Show("invalid Username and Password")
                 Application.Restart() ''restarts application because otherwise it throws error when re entering username and password
-
             End If
         Else
             ''IF Admin Login Selected
@@ -73,7 +72,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Close()
+        Application.Exit()
     End Sub
 
     Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
@@ -129,9 +128,9 @@ Public Class Form1
     End Sub
     Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
         If TextBox2.Text = "Enter Password" Then
-            TextBox2.Text = ""
-            TextBox2.ForeColor = Color.Black
-            TextBox2.PasswordChar = "*"
+            TextBox2.Clear()
         End If
+        TextBox2.ForeColor = Color.Black
+        TextBox2.PasswordChar = "*"
     End Sub
 End Class
