@@ -103,4 +103,8 @@ Public Class Form7
         TextBox3.ForeColor = Color.Black
         TextBox3.PasswordChar = "*"
     End Sub
+
+    Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.ControlBox = False
+    End Sub
 End Class
