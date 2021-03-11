@@ -22,10 +22,10 @@ Public Class Form1
         con = New SqlConnection(constring)
         con.Open()
         cmd.Connection = con
-        cmd.CommandText = "select * from Reg where uid= @uid and fname = @fname "
+        cmd.CommandText = "select * from users where aadhar= @uid and password = @password "
 
         cmd.Parameters.Add("@uid", SqlDbType.VarChar).Value = TextBox1.Text
-        cmd.Parameters.Add("@fname", SqlDbType.VarChar).Value = TextBox2.Text
+        cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = TextBox2.Text
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -44,7 +44,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Form2.Show()
+        Form7.Show()
         Me.Hide()
     End Sub
 
@@ -72,6 +72,10 @@ Public Class Form1
             Form6.Show()
             Me.Hide()
         End If
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

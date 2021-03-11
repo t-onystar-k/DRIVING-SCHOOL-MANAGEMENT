@@ -165,4 +165,8 @@ Public Class Form2
         Button3.Visible = False
 
     End Sub
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
