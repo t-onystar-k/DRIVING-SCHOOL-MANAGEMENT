@@ -20,7 +20,7 @@ Public Class Form1
 
         ''IF Individual Login selected
         If Checkbox1.Checked = True Then
-            Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+            Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Driving School Management\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
             con = New SqlConnection(constring)
             con.Open()
             cmd.Connection = con

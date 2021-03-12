@@ -71,3 +71,29 @@ D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management
 D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Resources.resources
 D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.GenerateResource.Cache
 D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form7.resources
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Database0.mdf
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Database0_log.ldf
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Driving School Management.exe.config
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Driving School Management.exe
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Driving School Management.pdb
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Driving School Management.xml
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbprojAssemblyReference.cache
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form1.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form2.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form3.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form4.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.form5.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.form6.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form7.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Resources.resources
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.GenerateResource.cache
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.CoreCompileInputs.cache
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.exe
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.xml
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form8.resources
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Interop.AcroPDFLib.dll
+D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Interop.AcroPDFLib.dll
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.ResolveComReference.cache
