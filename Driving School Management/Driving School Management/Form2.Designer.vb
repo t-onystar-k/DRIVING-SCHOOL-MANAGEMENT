@@ -541,7 +541,7 @@ Partial Class Form2
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(284, 9)
+        Me.Label19.Location = New System.Drawing.Point(284, 8)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(158, 31)
         Me.Label19.TabIndex = 3

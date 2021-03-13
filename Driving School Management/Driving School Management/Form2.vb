@@ -14,7 +14,7 @@ Public Class Form2
         End If
 
     End Sub
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Dim pict As String
         If OpenFileDialog1.ShowDialog = DialogResult.OK Then
             pict = OpenFileDialog1.FileName
@@ -117,22 +117,7 @@ Public Class Form2
         Dim da As New SqlDataAdapter
         da.InsertCommand = cmd
         da.InsertCommand.ExecuteNonQuery()
-        MsgBox("Registered succesfully. Make fee payment now?", MsgBoxStyle.YesNo)
-
-        If MsgBoxResult.Yes Then
-            Form4.Show()
-            Me.Hide()
-        Else
-            Me.Close()
-        End If
-
-    End Sub
-
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-
-
+        MsgBox("Application Submitted succesfully.")
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -166,6 +151,10 @@ Public Class Form2
         Label12.Visible = False
         TextBox11.Visible = False
         Button3.Visible = False
+
+    End Sub
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
