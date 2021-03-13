@@ -302,4 +302,40 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
+
+    '
+    'MAking form with no head draggable
+    '
+    Private isMouseDown As Boolean = False
+    Private mouseOffset As Point
+
+    ' Left mouse button pressed
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            ' Get the new position
+            mouseOffset = New Point(-e.X, -e.Y)
+            ' Set that left button is pressed
+            isMouseDown = True
+        End If
+    End Sub
+
+    ' MouseMove used to check if mouse cursor is moving
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        If isMouseDown Then
+            Dim mousePos As Point = Control.MousePosition
+            ' Get the new form position
+            mousePos.Offset(mouseOffset.X, mouseOffset.Y)
+            Me.Location = mousePos
+        End If
+    End Sub
+
+    ' Left mouse button released, form should stop moving
+    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            isMouseDown = False
+        End If
+    End Sub
+
+    '
+    '
 End Class
