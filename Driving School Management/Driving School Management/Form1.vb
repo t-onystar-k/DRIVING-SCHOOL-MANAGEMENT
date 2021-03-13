@@ -26,6 +26,8 @@ Public Class Form1
             cmd.Connection = con
             cmd.CommandText = "select * from users where aadhar= @uid and password = @password "
 
+            cmd.Parameters.Clear()
+
             cmd.Parameters.Add("@uid", SqlDbType.VarChar).Value = TextBox1.Text
             cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = TextBox2.Text
             Dim adapter As New SqlDataAdapter(cmd)
@@ -42,7 +44,6 @@ Public Class Form1
 
             Else
                 MessageBox.Show("invalid Username and Password")
-                Application.Restart() ''restarts application because otherwise it throws error when re entering username and password
             End If
         Else
             ''IF Admin Login Selected

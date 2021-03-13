@@ -6,6 +6,7 @@
         With Form3
             .TopLevel = False
             .ControlBox = False
+            .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form3)
             .BringToFront()
@@ -20,6 +21,7 @@
         With Form2
             .TopLevel = False
             .ControlBox = False
+            .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form2)
             .BringToFront()
@@ -35,6 +37,7 @@
         With Form4
             .TopLevel = False
             .ControlBox = False
+            .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form4)
             .BringToFront()
