@@ -77,7 +77,6 @@ D:\Driving School Management\Driving School Management\Driving School Management
 D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Driving School Management.exe
 D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Driving School Management.pdb
 D:\Driving School Management\Driving School Management\Driving School Management\bin\Debug\Driving School Management.xml
-D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbprojAssemblyReference.cache
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form1.resources
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form2.resources
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form3.resources
@@ -87,7 +86,6 @@ D:\Driving School Management\Driving School Management\Driving School Management
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form7.resources
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Resources.resources
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.GenerateResource.cache
-D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.CoreCompileInputs.cache
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.exe
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.xml
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.pdb

@@ -1,11 +1,12 @@
 ﻿Public Class form5
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Panel6.Controls.Clear()
-        Me.Size = New Size(900, 540)
+        Me.Size = New Size(900, 550)
 
         With Form3
             .TopLevel = False
             .ControlBox = False
+            .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form3)
             .BringToFront()
@@ -20,6 +21,7 @@
         With Form2
             .TopLevel = False
             .ControlBox = False
+            .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form2)
             .BringToFront()
@@ -30,11 +32,12 @@
    
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Panel6.Controls.Clear()
-        Me.Size = New Size(900, 580)
+        Me.Size = New Size(900, 550)
 
         With Form4
             .TopLevel = False
             .ControlBox = False
+            .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form4)
             .BringToFront()
@@ -43,7 +46,7 @@
     End Sub
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.ControlBox = False
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

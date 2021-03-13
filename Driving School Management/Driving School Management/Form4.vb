@@ -6,12 +6,10 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         If TextBox1.Text = "" Then
-            MsgBox("Please enter necessary info")
+            Label7.Show()
         Else
+            Label7.Hide()
             MsgBox("Payment Successful")
-            Form1.Show()
-            Me.Close()
-
         End If
     End Sub
 
@@ -45,6 +43,4 @@
         Label5.Visible = False
         TextBox2.Visible = False
     End Sub
-
-
 End Class

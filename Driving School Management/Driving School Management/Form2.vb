@@ -14,7 +14,7 @@ Public Class Form2
         End If
 
     End Sub
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Dim pict As String
         If OpenFileDialog1.ShowDialog = DialogResult.OK Then
             pict = OpenFileDialog1.FileName
@@ -24,7 +24,7 @@ Public Class Form2
 
 
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Dim OpenFileDialog1 As New OpenFileDialog
         OpenFileDialog1.InitialDirectory = "D:\"
         OpenFileDialog1.RestoreDirectory = True
@@ -34,7 +34,7 @@ Public Class Form2
             TextBox10.Text = System.IO.Path.GetFullPath(OpenFileDialog1.FileName)
         End If
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Dim OpenFileDialog1 As New OpenFileDialog
         OpenFileDialog1.InitialDirectory = "D:\"
         OpenFileDialog1.RestoreDirectory = True
@@ -44,7 +44,7 @@ Public Class Form2
             TextBox11.Text = System.IO.Path.GetFullPath(OpenFileDialog1.FileName)
         End If
     End Sub
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
         Dim OpenFileDialog1 As New OpenFileDialog
         OpenFileDialog1.InitialDirectory = "D:\"
@@ -117,40 +117,28 @@ Public Class Form2
         Dim da As New SqlDataAdapter
         da.InsertCommand = cmd
         da.InsertCommand.ExecuteNonQuery()
-        MsgBox("Registered succesfully. Make fee payment now?", MsgBoxStyle.YesNo)
-
-        If MsgBoxResult.Yes Then
-            Form4.Show()
-            Me.Hide()
-        Else
-            Me.Close()
-        End If
-
-    End Sub
-
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-
-
+        MsgBox("Application Submitted succesfully.")
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        TextBox1.Text = " "
-        TextBox2.Text = " "
-        TextBox3.Text = " "
-        TextBox4.Text = " "
-        TextBox5.Text = " "
-        TextBox6.Text = " "
-        TextBox7.Text = " "
-        TextBox8.Text = " "
-        TextBox9.Text = " "
-        TextBox10.Text = " "
-        TextBox11.Text = " "
-        TextBox12.Text = " "
-        TextBox13.Text = " "
-        TextBox14.Text = " "
-
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
+        TextBox5.Clear()
+        TextBox6.Clear()
+        TextBox7.Clear()
+        TextBox8.Clear()
+        TextBox9.Clear()
+        TextBox10.Clear()
+        TextBox11.Clear()
+        TextBox12.Clear()
+        TextBox13.Clear()
+        TextBox14.Clear()
+        TextBox15.Clear()
+        ComboBox1.SelectedIndex = -1
+        DateTimePicker1.Value = Date.Now
+        PictureBox1.Image = Nothing
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
