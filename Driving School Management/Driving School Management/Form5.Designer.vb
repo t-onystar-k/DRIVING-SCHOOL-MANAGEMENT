@@ -39,7 +39,7 @@ Partial Class form5
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
@@ -78,7 +78,7 @@ Partial Class form5
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 241)
+        Me.Button3.Location = New System.Drawing.Point(0, 244)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.Button3.Size = New System.Drawing.Size(185, 38)
@@ -97,7 +97,7 @@ Partial Class form5
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(0, 203)
+        Me.Button2.Location = New System.Drawing.Point(0, 206)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.Button2.Size = New System.Drawing.Size(185, 38)
@@ -116,7 +116,7 @@ Partial Class form5
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(0, 165)
+        Me.Button1.Location = New System.Drawing.Point(0, 168)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.Button1.Size = New System.Drawing.Size(185, 38)
@@ -130,7 +130,7 @@ Partial Class form5
         '
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 22)
+        Me.Panel4.Location = New System.Drawing.Point(0, 25)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(185, 143)
         Me.Panel4.TabIndex = 2
@@ -149,30 +149,30 @@ Partial Class form5
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(185, 22)
+        Me.Panel2.Size = New System.Drawing.Size(185, 25)
         Me.Panel2.TabIndex = 0
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(185, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(699, 22)
+        Me.Panel3.Size = New System.Drawing.Size(699, 25)
         Me.Panel3.TabIndex = 1
         '
         'Panel6
         '
         Me.Panel6.AutoSize = True
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.White
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(185, 22)
+        Me.Panel6.Location = New System.Drawing.Point(185, 25)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(699, 489)
+        Me.Panel6.Size = New System.Drawing.Size(699, 486)
         Me.Panel6.TabIndex = 2
         '
         'form5
