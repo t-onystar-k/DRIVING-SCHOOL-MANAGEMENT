@@ -66,6 +66,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ControlBox = False
+        Me.Text = ""
         Label3.Visible = True
         Label4.Visible = True
 
@@ -134,4 +135,6 @@ Public Class Form1
         TextBox2.ForeColor = Color.Black
         TextBox2.PasswordChar = "*"
     End Sub
+
+
 End Class
