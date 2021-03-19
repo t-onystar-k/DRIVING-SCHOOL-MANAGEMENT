@@ -37,6 +37,7 @@ Partial Class Form7
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -179,6 +180,7 @@ Partial Class Form7
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.Panel2)
         Me.Panel4.Controls.Add(Me.Panel3)
@@ -197,6 +199,18 @@ Partial Class Form7
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(884, 25)
         Me.Panel5.TabIndex = 23
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.Crimson
+        Me.Label2.Location = New System.Drawing.Point(5, 238)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(305, 13)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Entered uid already exists. Please try again or login with the uid."
+        Me.Label2.Visible = False
         '
         'Form7
         '
@@ -271,6 +285,7 @@ Partial Class Form7
             isMouseDown = False
         End If
     End Sub
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
     '
     '

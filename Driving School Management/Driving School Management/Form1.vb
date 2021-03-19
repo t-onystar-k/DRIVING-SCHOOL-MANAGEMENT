@@ -132,8 +132,14 @@ Public Class Form1
         If TextBox2.Text = "Enter Password" Then
             TextBox2.Clear()
         End If
-        TextBox2.ForeColor = Color.Black
-        TextBox2.PasswordChar = "*"
+        If CheckBox3.Checked = True Then
+            TextBox2.ForeColor = Color.Black
+            TextBox2.PasswordChar = ""
+        Else
+            TextBox2.ForeColor = Color.Black
+            TextBox2.PasswordChar = "*"
+        End If
+        
     End Sub
 
 
