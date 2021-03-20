@@ -55,69 +55,121 @@ Public Class Form2
             TextBox15.Text = System.IO.Path.GetFullPath(OpenFileDialog1.FileName)
         End If
     End Sub
+    Function IsValidEmailFormat(ByVal s As String) As Boolean
+        Try
+            Dim a As New System.Net.Mail.MailAddress(s)
+        Catch
+            Return False
+        End Try
+        Return True
+    End Function
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
-        con = New SqlConnection(constring)
-        con.Open()
-        cmd.Connection = con
-        cmd.CommandText = "INSERT INTO Reg(uid,fname,mname,lname,f_ad,m_ad,l_ad,pin,pic,a_pic,b_c,d_c,phone,email,blood,gen,sign)values(@uid,@fname,@mname,@lname,@f_ad,@m_ad,@l_ad,@pin,@pic,@a_pic,@b_c,@d_c,@phone,@email,@blood,@gen,@sign)"
-        Dim paramuid As New SqlParameter("@uid", SqlDbType.VarChar, 15)
-        paramuid.Value = TextBox13.Text
-        Dim paramfname As New SqlParameter("@fname", SqlDbType.VarChar, 20)
-        paramfname.Value = TextBox1.Text
-        Dim parammname As New SqlParameter("@mname", SqlDbType.VarChar, 20)
-        parammname.Value = TextBox2.Text
-        Dim paramlname As New SqlParameter("@lname", SqlDbType.VarChar, 20)
-        paramlname.Value = TextBox3.Text
-        Dim paramf_ad As New SqlParameter("@f_ad", SqlDbType.VarChar, 25)
-        paramf_ad.Value = TextBox4.Text
-        Dim paramm_ad As New SqlParameter("@m_ad", SqlDbType.VarChar, 25)
-        paramm_ad.Value = TextBox5.Text
-        Dim paraml_ad As New SqlParameter("@l_ad", SqlDbType.VarChar, 25)
-        paraml_ad.Value = TextBox6.Text
-        Dim parampin As New SqlParameter("@pin", SqlDbType.NChar, 10)
-        parampin.Value = TextBox7.Text
-        Dim parampic As New SqlParameter("@pic", SqlDbType.VarChar, 230)
-        parampic.Value = PictureBox1.ImageLocation
-        Dim parama_pic As New SqlParameter("@a_pic", SqlDbType.VarChar, 230)
-        parama_pic.Value = TextBox12.Text
-        Dim paramb_c As New SqlParameter("@b_c", SqlDbType.VarChar, 230)
-        paramb_c.Value = TextBox10.Text
-        Dim paramd_c As New SqlParameter("@d_c", SqlDbType.VarChar, 230)
-        paramd_c.Value = TextBox11.Text
-        Dim paramphone As New SqlParameter("@phone", SqlDbType.VarChar, 230)
-        paramphone.Value = TextBox14.Text
-        Dim paramemail As New SqlParameter("@email", SqlDbType.VarChar, 230)
-        paramemail.Value = TextBox9.Text
-        Dim paramblood As New SqlParameter("@blood", SqlDbType.VarChar, 230)
-        paramblood.Value = TextBox8.Text
-        Dim paramgen As New SqlParameter("@gen", SqlDbType.VarChar, 230)
-        paramgen.Value = ComboBox1.Text
-        Dim paramsign As New SqlParameter("@sign", SqlDbType.VarChar, 230)
-        paramsign.Value = TextBox15.Text
 
-        cmd.Parameters.Add(paramuid)
-        cmd.Parameters.Add(paramfname)
-        cmd.Parameters.Add(parammname)
-        cmd.Parameters.Add(paramlname)
-        cmd.Parameters.Add(paramf_ad)
-        cmd.Parameters.Add(paramm_ad)
-        cmd.Parameters.Add(paraml_ad)
-        cmd.Parameters.Add(parampin)
-        cmd.Parameters.Add(parampic)
-        cmd.Parameters.Add(parama_pic)
-        cmd.Parameters.Add(paramb_c)
-        cmd.Parameters.Add(paramd_c)
-        cmd.Parameters.Add(paramphone)
-        cmd.Parameters.Add(paramemail)
-        cmd.Parameters.Add(paramblood)
-        cmd.Parameters.Add(paramgen)
-        cmd.Parameters.Add(paramsign)
+        ''''''' DATA VALIDATION - START
+        Label1.Visible = False
+        Dim usermail = IsValidEmailFormat(TextBox9.Text)
+        ''if any details left unfilled
+        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox8.Text = "" Or TextBox9.Text = "" Or TextBox10.Text = "" Or TextBox12.Text = "" Or TextBox13.Text = "" Or TextBox14.Text = "" Or TextBox15.Text = "" Then
+            Label1.Text = "Please Fill in all details !"
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
-        Dim da As New SqlDataAdapter
-        da.InsertCommand = cmd
-        da.InsertCommand.ExecuteNonQuery()
-        MsgBox("Application Submitted succesfully.")
+            '' eye cert
+        ElseIf RadioButton1.Checked = True And TextBox11.Text = "" Then
+            Label1.Text = "Please Fill in all details !"
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''no photo uploaded
+        ElseIf PictureBox1.Image Is Nothing Then
+            Label1.Text = "Please upload your photo."
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''phone number length
+        ElseIf TextBox14.Text.Length <> 10 Then
+            Label1.Text = "Please enter a 10 digit phone number."
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''gender
+        ElseIf ComboBox1.SelectedIndex = -1 Then
+            Label1.Text = "Please Fill in all details !"
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''email format
+        ElseIf usermail = False Then
+            Label1.Text = "Invalid Email format"
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''''''' DATA VALIDATION - END
+        Else
+            Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+            con = New SqlConnection(constring)
+            con.Open()
+            cmd.Connection = con
+            cmd.CommandText = "INSERT INTO Reg(uid,fname,mname,lname,f_ad,m_ad,l_ad,pin,pic,a_pic,b_c,d_c,phone,email,blood,gen,sign)values(@uid,@fname,@mname,@lname,@f_ad,@m_ad,@l_ad,@pin,@pic,@a_pic,@b_c,@d_c,@phone,@email,@blood,@gen,@sign)"
+            Dim paramuid As New SqlParameter("@uid", SqlDbType.VarChar, 15)
+            paramuid.Value = TextBox13.Text
+            Dim paramfname As New SqlParameter("@fname", SqlDbType.VarChar, 20)
+            paramfname.Value = TextBox1.Text
+            Dim parammname As New SqlParameter("@mname", SqlDbType.VarChar, 20)
+            parammname.Value = TextBox2.Text
+            Dim paramlname As New SqlParameter("@lname", SqlDbType.VarChar, 20)
+            paramlname.Value = TextBox3.Text
+            Dim paramf_ad As New SqlParameter("@f_ad", SqlDbType.VarChar, 25)
+            paramf_ad.Value = TextBox4.Text
+            Dim paramm_ad As New SqlParameter("@m_ad", SqlDbType.VarChar, 25)
+            paramm_ad.Value = TextBox5.Text
+            Dim paraml_ad As New SqlParameter("@l_ad", SqlDbType.VarChar, 25)
+            paraml_ad.Value = TextBox6.Text
+            Dim parampin As New SqlParameter("@pin", SqlDbType.NChar, 10)
+            parampin.Value = TextBox7.Text
+            Dim parampic As New SqlParameter("@pic", SqlDbType.VarChar, 230)
+            parampic.Value = PictureBox1.ImageLocation
+            Dim parama_pic As New SqlParameter("@a_pic", SqlDbType.VarChar, 230)
+            parama_pic.Value = TextBox12.Text
+            Dim paramb_c As New SqlParameter("@b_c", SqlDbType.VarChar, 230)
+            paramb_c.Value = TextBox10.Text
+            Dim paramd_c As New SqlParameter("@d_c", SqlDbType.VarChar, 230)
+            paramd_c.Value = TextBox11.Text
+            Dim paramphone As New SqlParameter("@phone", SqlDbType.VarChar, 230)
+            paramphone.Value = TextBox14.Text
+            Dim paramemail As New SqlParameter("@email", SqlDbType.VarChar, 230)
+            paramemail.Value = TextBox9.Text
+            Dim paramblood As New SqlParameter("@blood", SqlDbType.VarChar, 230)
+            paramblood.Value = TextBox8.Text
+            Dim paramgen As New SqlParameter("@gen", SqlDbType.VarChar, 230)
+            paramgen.Value = ComboBox1.Text
+            Dim paramsign As New SqlParameter("@sign", SqlDbType.VarChar, 230)
+            paramsign.Value = TextBox15.Text
+
+            cmd.Parameters.Add(paramuid)
+            cmd.Parameters.Add(paramfname)
+            cmd.Parameters.Add(parammname)
+            cmd.Parameters.Add(paramlname)
+            cmd.Parameters.Add(paramf_ad)
+            cmd.Parameters.Add(paramm_ad)
+            cmd.Parameters.Add(paraml_ad)
+            cmd.Parameters.Add(parampin)
+            cmd.Parameters.Add(parampic)
+            cmd.Parameters.Add(parama_pic)
+            cmd.Parameters.Add(paramb_c)
+            cmd.Parameters.Add(paramd_c)
+            cmd.Parameters.Add(paramphone)
+            cmd.Parameters.Add(paramemail)
+            cmd.Parameters.Add(paramblood)
+            cmd.Parameters.Add(paramgen)
+            cmd.Parameters.Add(paramsign)
+
+            Dim da As New SqlDataAdapter
+            da.InsertCommand = cmd
+            da.InsertCommand.ExecuteNonQuery()
+            MsgBox("Application Submitted succesfully.")
+        End If
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -139,6 +191,7 @@ Public Class Form2
         ComboBox1.SelectedIndex = -1
         DateTimePicker1.Value = Date.Now
         PictureBox1.Image = Nothing
+        Label1.Visible = False
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
