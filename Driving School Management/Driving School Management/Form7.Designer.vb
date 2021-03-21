@@ -194,13 +194,13 @@ Partial Class Form7
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.Color.Crimson
-        Me.Label2.Location = New System.Drawing.Point(5, 238)
+        Me.Label2.BackColor = System.Drawing.Color.Firebrick
+        Me.Label2.ForeColor = System.Drawing.Color.GhostWhite
+        Me.Label2.Location = New System.Drawing.Point(135, 238)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(305, 13)
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 21
-        Me.Label2.Text = "Entered uid already exists. Please try again or login with the uid."
+        Me.Label2.Text = "Label2"
         Me.Label2.Visible = False
         '
         'Panel5

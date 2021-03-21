@@ -40,6 +40,7 @@ Partial Class Form1
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -231,6 +232,7 @@ Partial Class Form1
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.Label5)
         Me.Panel4.Controls.Add(Me.Checkbox1)
         Me.Panel4.Controls.Add(Me.CheckBox3)
@@ -246,6 +248,17 @@ Partial Class Form1
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(313, 405)
         Me.Panel4.TabIndex = 19
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Firebrick
+        Me.Label1.ForeColor = System.Drawing.Color.GhostWhite
+        Me.Label1.Location = New System.Drawing.Point(128, 221)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(45, 15)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Label1"
         '
         'Panel5
         '
@@ -335,6 +348,7 @@ Partial Class Form1
             isMouseDown = False
         End If
     End Sub
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
     '
     '

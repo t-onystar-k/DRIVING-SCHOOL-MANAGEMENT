@@ -7,11 +7,17 @@ Public Class Form7
 
         If TextBox1.Text = "Enter Aadhar UID" Or TextBox2.Text = "Enter Password" Then
             MsgBox("Please enter necessary details")
+        ElseIf TextBox1.Text.Length <> 12 Then
+            Label2.Text = "Note: Please Enter 12-digit aadhar uid"
+            Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
+            Label2.Visible = True
         ElseIf TextBox2.Text.Length < 5 Then
             Label2.Text = "Note : Password should be atleast 5 characters long!"
+            Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
             Label2.Visible = True
         ElseIf TextBox2.Text <> TextBox3.Text Then
             Label2.Text = "Note : Password doesn't match confirm password!"
+            Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
             Label2.Visible = True
         Else
             Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Driving School Management\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
@@ -31,6 +37,7 @@ Public Class Form7
 
             If table.Rows.Count() <> 0 Then
                 Label2.Text = "Entered uid already exists. Please try again or login with the uid."
+                Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
                 Label2.Visible = True
             Else
                 cmd.CommandText = "INSERT INTO users(aadhar,password)values(@aadhar,@password)"
