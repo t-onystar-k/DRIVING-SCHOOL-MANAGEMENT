@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 Public Class Form7
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
@@ -7,6 +8,10 @@ Public Class Form7
 
         If TextBox1.Text = "Enter Aadhar UID" Or TextBox2.Text = "Enter Password" Then
             MsgBox("Please enter necessary details")
+        ElseIf Not IsNumeric(TextBox1.Text) Then
+            Label2.Text = "Note: Aadhaar uid must contain only numeric values !"
+            Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
+            Label2.Visible = True
         ElseIf TextBox1.Text.Length <> 12 Then
             Label2.Text = "Note: Please Enter 12-digit aadhar uid"
             Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
@@ -138,4 +143,5 @@ Public Class Form7
         Me.Text = ""
         Label2.Visible = False
     End Sub
+
 End Class
