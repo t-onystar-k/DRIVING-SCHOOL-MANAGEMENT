@@ -45,7 +45,7 @@ Public Class Form1
             Dim table As New DataTable()
             adapter.Fill(table)
             If table.Rows.Count() <> 0 Then
-                MessageBox.Show("Login succesful")
+                form5.Label2.Text = TextBox1.Text
                 form5.Show()
                 Me.Refresh()
                 Me.Hide()
@@ -62,6 +62,7 @@ Public Class Form1
             ''IF Admin Login Selected
             If TextBox1.Text = "Admin2021" And TextBox2.Text = "pass2021" Then
                 MessageBox.Show("Logged in succesfully")
+                ''form6.Label2.Text = TextBox1.Text
                 form6.Show()
                 Me.Hide()
             Else

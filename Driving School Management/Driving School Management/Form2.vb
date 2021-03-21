@@ -75,6 +75,11 @@ Public Class Form2
             Label1.Visible = True
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
+            ''aadhar uid
+        ElseIf Not IsNumeric(TextBox13.Text) Or TextBox13.Text.Length <> 12 Then
+            Label1.Text = "Aadhaar uid must be 12-digit numeric value !"
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+            Label1.Visible = True
             '' eye cert
         ElseIf RadioButton1.Checked = True And TextBox11.Text = "" Then
             Label1.Text = "Please Fill in all details !"
@@ -174,8 +179,15 @@ Public Class Form2
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         TextBox1.Clear()
+        TextBox1.Text = "First Name"
+        TextBox1.ForeColor = Color.Gray
         TextBox2.Clear()
+        TextBox2.Text = "Middle Name"
+        TextBox2.ForeColor = Color.Gray
         TextBox3.Clear()
+        TextBox3.Text = "Last Name"
+        TextBox3.ForeColor = Color.Gray
+
         TextBox4.Clear()
         TextBox5.Clear()
         TextBox6.Clear()
@@ -185,7 +197,6 @@ Public Class Form2
         TextBox10.Clear()
         TextBox11.Clear()
         TextBox12.Clear()
-        TextBox13.Clear()
         TextBox14.Clear()
         TextBox15.Clear()
         ComboBox1.SelectedIndex = -1
