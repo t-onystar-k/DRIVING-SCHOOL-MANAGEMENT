@@ -191,7 +191,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Database0DataSet.xsc">
       <DependentUpon>Database0DataSet.xsd</DependentUpon>
     </None>
