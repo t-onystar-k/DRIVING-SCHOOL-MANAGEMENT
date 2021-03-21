@@ -6,13 +6,24 @@ Public Class Form1
     Dim cmd1 As New SqlCommand
 
     Private Sub Checkbox1_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox1.CheckedChanged
+        Label1.Visible = False
         Label3.Visible = True
         Label4.Visible = True
+        ''reset textboxes
+        TextBox1.Text = "Enter Aadhar UID"
+        TextBox1.ForeColor = Color.Gray
+        TextBox2.Text = "Enter Password"
+        TextBox2.ForeColor = Color.Gray
     End Sub
     Private Sub Checkbox2_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox2.CheckedChanged
+        Label1.Visible = False
         Label3.Visible = False
         Label4.Visible = False
+        ''reset textboxes
         TextBox1.Text = "Enter Admin ID"
+        TextBox1.ForeColor = Color.Gray
+        TextBox2.Text = "Enter Password"
+        TextBox2.ForeColor = Color.Gray
     End Sub
 
 
@@ -43,7 +54,9 @@ Public Class Form1
 
 
             Else
-                MessageBox.Show("invalid Username and Password")
+                Label1.Text = "Invalid UserId and/or password !"
+                Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+                Label1.Visible = True
             End If
         Else
             ''IF Admin Login Selected
@@ -52,9 +65,10 @@ Public Class Form1
                 form6.Show()
                 Me.Hide()
             Else
-                MessageBox.Show("invalid Username and Password")
-                Me.Controls.Clear() 'removes all the controls on the form
-                InitializeComponent() 'load all the controls again
+                Label1.Text = "Invalid UserId and/or password !"
+                Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+                Label1.Visible = True
+
             End If
         End If
     End Sub
@@ -69,7 +83,7 @@ Public Class Form1
         Me.Text = ""
         Label3.Visible = True
         Label4.Visible = True
-
+        Label1.Visible = False
 
     End Sub
 
@@ -119,6 +133,7 @@ Public Class Form1
         If TextBox2.Text = "" Then
             TextBox2.Text = "Enter Password"
             TextBox2.ForeColor = Color.Gray
+            TextBox2.PasswordChar = ""
         End If
     End Sub
 
