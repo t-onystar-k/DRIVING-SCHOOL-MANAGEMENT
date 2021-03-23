@@ -28,6 +28,14 @@
             .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form2)
+            ''pass aadhar to application
+            .TextBox13.Text = Label2.Text
+            ''format textbox13
+            .TextBox13.ReadOnly = True
+            .TextBox13.BackColor = System.Drawing.SystemColors.Window
+            .TextBox13.BorderStyle = BorderStyle.None
+            .TextBox13.Top = .TextBox13.Top + 4
+            ''
             .BringToFront()
             .Show()
         End With
@@ -53,6 +61,7 @@
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ControlBox = False
+        Me.Text = ""
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

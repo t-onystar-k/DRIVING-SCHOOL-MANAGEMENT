@@ -294,6 +294,8 @@ Partial Class Form2
         '
         'TextBox13
         '
+        Me.TextBox13.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox13.Location = New System.Drawing.Point(98, 19)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(139, 20)
