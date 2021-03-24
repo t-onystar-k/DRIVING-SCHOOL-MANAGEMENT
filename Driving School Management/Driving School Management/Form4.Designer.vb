@@ -59,7 +59,7 @@ Partial Class Form4
         Me.GroupBox2.Controls.Add(Me.CheckBox2)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(20, 139)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 139)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(326, 265)
         Me.GroupBox2.TabIndex = 24
@@ -155,7 +155,7 @@ Partial Class Form4
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(352, 139)
+        Me.GroupBox1.Location = New System.Drawing.Point(360, 139)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(326, 265)
         Me.GroupBox1.TabIndex = 23
@@ -256,7 +256,7 @@ Partial Class Form4
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(699, 47)
+        Me.Panel1.Size = New System.Drawing.Size(714, 47)
         Me.Panel1.TabIndex = 43
         '
         'Label19
@@ -264,7 +264,7 @@ Partial Class Form4
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(285, 8)
+        Me.Label19.Location = New System.Drawing.Point(293, 8)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(128, 31)
         Me.Label19.TabIndex = 3
@@ -284,7 +284,7 @@ Partial Class Form4
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(699, 518)
+        Me.ClientSize = New System.Drawing.Size(714, 518)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -324,5 +324,5 @@ Partial Class Form4
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

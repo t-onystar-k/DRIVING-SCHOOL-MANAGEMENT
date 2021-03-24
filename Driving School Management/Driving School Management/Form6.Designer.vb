@@ -24,6 +24,7 @@ Partial Class form6
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form6))
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -67,10 +68,8 @@ Partial Class form6
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Panel6.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -116,6 +115,15 @@ Partial Class form6
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(699, 601)
         Me.Panel6.TabIndex = 5
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(295, 541)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 6
+        Me.Button8.Text = "PRINT"
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'TextBox15
         '
@@ -436,7 +444,6 @@ Partial Class form6
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 22)
         Me.Panel1.Name = "Panel1"
@@ -469,7 +476,7 @@ Partial Class form6
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(0, 203)
+        Me.Button2.Location = New System.Drawing.Point(0, 181)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.Button2.Size = New System.Drawing.Size(185, 38)
@@ -488,7 +495,7 @@ Partial Class form6
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(0, 165)
+        Me.Button1.Location = New System.Drawing.Point(0, 143)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.Button1.Size = New System.Drawing.Size(185, 38)
@@ -502,7 +509,7 @@ Partial Class form6
         '
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 22)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(185, 143)
         Me.Panel4.TabIndex = 2
@@ -519,18 +526,9 @@ Partial Class form6
         Me.Panel5.Size = New System.Drawing.Size(97, 102)
         Me.Panel5.TabIndex = 0
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(185, 22)
-        Me.Panel2.TabIndex = 0
-        '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
@@ -539,15 +537,6 @@ Partial Class form6
         '
         'PrintDocument1
         '
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(295, 541)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 6
-        Me.Button8.Text = "PRINT"
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'PrintDialog1
         '
@@ -582,7 +571,6 @@ Partial Class form6
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
