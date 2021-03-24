@@ -7,7 +7,9 @@ Public Class Form7
         Label2.Visible = False
 
         If TextBox1.Text = "Enter Aadhar UID" Or TextBox2.Text = "Enter Password" Then
-            MsgBox("Please enter necessary details")
+            Label2.Text = "Please fill in all necessary details !"
+            Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
+            Label2.Visible = True
         ElseIf Not IsNumeric(TextBox1.Text) Then
             Label2.Text = "Note: Aadhaar uid must contain only numeric values !"
             Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
@@ -16,8 +18,8 @@ Public Class Form7
             Label2.Text = "Note: Please Enter 12-digit aadhar uid"
             Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
             Label2.Visible = True
-        ElseIf TextBox2.Text.Length < 5 Then
-            Label2.Text = "Note : Password should be atleast 5 characters long!"
+        ElseIf TextBox2.Text.Length < 8 Then
+            Label2.Text = "Note : Password should be atleast 8 characters long!"
             Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
             Label2.Visible = True
         ElseIf TextBox2.Text <> TextBox3.Text Then

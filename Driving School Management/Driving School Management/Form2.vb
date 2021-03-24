@@ -93,8 +93,8 @@ Public Class Form2
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
             ''phone number length
-        ElseIf TextBox14.Text.Length <> 10 Then
-            Label1.Text = "Please enter a 10 digit phone number."
+        ElseIf TextBox14.Text.Length <> 10 Or Not IsNumeric(TextBox14.Text) Or TextBox14.Text < 1000000000 Then
+            Label1.Text = "Please enter a valid 10 digit phone number."
             Label1.Visible = True
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
@@ -107,6 +107,12 @@ Public Class Form2
             ''email format
         ElseIf usermail = False Then
             Label1.Text = "Invalid Email format"
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''pin number
+        ElseIf TextBox7.Text.Length <> 6 Or TextBox7.Text < 100000 Or Not IsNumeric(TextBox7.Text) Then
+            Label1.Text = "Invalid PIN"
             Label1.Visible = True
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
