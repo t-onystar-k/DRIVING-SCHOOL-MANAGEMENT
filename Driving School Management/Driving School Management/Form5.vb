@@ -54,6 +54,8 @@
             .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form4)
+            ''pass aadhar to application
+            .Label8.Text = Label2.Text
             .BringToFront()
             .Show()
         End With

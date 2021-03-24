@@ -32,6 +32,7 @@ Partial Class Form4
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -42,7 +43,7 @@ Partial Class Form4
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -161,6 +162,17 @@ Partial Class Form4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pay"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Firebrick
+        Me.Label7.Location = New System.Drawing.Point(83, 203)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(155, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Please Fill in necessary details !"
+        Me.Label7.Visible = False
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -258,16 +270,14 @@ Partial Class Form4
         Me.Label19.TabIndex = 3
         Me.Label19.Text = "Payment"
         '
-        'Label7
+        'Label8
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.Firebrick
-        Me.Label7.Location = New System.Drawing.Point(83, 203)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(155, 13)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Please Fill in necessary details !"
-        Me.Label7.Visible = False
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(20, 67)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(71, 13)
+        Me.Label8.TabIndex = 44
+        Me.Label8.Text = "AADHAR NO"
         '
         'Form4
         '
@@ -275,6 +285,7 @@ Partial Class Form4
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(699, 518)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
@@ -289,6 +300,7 @@ Partial Class Form4
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
@@ -312,5 +324,5 @@ Partial Class Form4
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-
+    Friend WithEvents Label8 As Label
 End Class

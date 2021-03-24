@@ -46,6 +46,7 @@ Public Class Form1
             adapter.Fill(table)
             If table.Rows.Count() <> 0 Then
                 form5.Label2.Text = TextBox1.Text
+
                 form5.Show()
                 Me.Refresh()
                 Me.Hide()

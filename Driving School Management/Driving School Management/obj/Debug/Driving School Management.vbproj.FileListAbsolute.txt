@@ -95,3 +95,11 @@ D:\Driving School Management\Driving School Management\Driving School Management
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Interop.AcroPDFLib.dll
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\AxInterop.AcroPDFLib.dll
 D:\Driving School Management\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.ResolveComReference.cache
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\bin\Debug\Interop.AcroPDFLib.dll
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbprojAssemblyReference.cache
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Interop.AcroPDFLib.dll
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.ResolveComReference.cache
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form8.resources
+D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\obj\Debug\Driving School Management.vbproj.CoreCompileInputs.cache

@@ -1,15 +1,48 @@
-﻿Public Class Form4
+﻿Imports System.Data.SqlClient
+Public Class Form4
+    Dim con As New SqlConnection
+    Dim cmd As New SqlCommand
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Payment"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+
+
         If TextBox1.Text = "" Then
             Label7.Show()
         Else
             Label7.Hide()
+            Dim constrig As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+            con = New SqlConnection(constrig)
+            con.Open()
+            cmd.Connection = con
+            cmd.CommandText = "INSERT INTO pay(Id,cash,cardno,cardname,uidno)values(@id,@cash,@cardno,@cardname,@uidno)"
+            Dim parid As New SqlParameter("@Id", SqlDbType.VarChar, 15)
+            parid.Value = Label8.Text
+            Dim parcash As New SqlParameter("@cash", SqlDbType.VarChar, 7)
+            parcash.Value = Label6.Text
+            Dim parcardno As New SqlParameter("@cardno", SqlDbType.VarChar, 20)
+            parcardno.Value = TextBox1.Text
+            Dim parcardname As New SqlParameter("@cardname", SqlDbType.VarChar, 50)
+            parcardname.Value = TextBox2.Text
+            Dim paruidno As New SqlParameter("@uidno", SqlDbType.VarChar, 20)
+            paruidno.Value = TextBox1.Text
+
+            cmd.Parameters.Add(parid)
+            cmd.Parameters.Add(parcash)
+            cmd.Parameters.Add(parcardno)
+            cmd.Parameters.Add(parcardname)
+            cmd.Parameters.Add(paruidno)
+
+            Dim da As New SqlDataAdapter
+            da.InsertCommand = cmd
+            da.InsertCommand.ExecuteNonQuery()
             MsgBox("Payment Successful")
+            TextBox1.Text = ""
+            TextBox2.Text = ""
+
         End If
     End Sub
 
