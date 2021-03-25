@@ -11,7 +11,25 @@ Public Class Form4
 
 
         If TextBox1.Text = "" Then
-            Label7.Show()
+            Label7.Text = "Please Fill in necessary details !"
+            Label7.Visible = True
+            Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            '' if radio btn 1 checked
+        ElseIf RadioButton1.Checked = True Then
+            If TextBox3.Text.Length <> 16 Then
+                Label7.Text = "Please Fill in valid 16-digit card number !"
+                Label7.Visible = True
+                Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ElseIf TextBox3.Text.Length <> 3 Then
+                Label7.Text = "Please Fill in valid cvv !"
+                Label7.Visible = True
+                Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
+            End If
+
+
+
         Else
             Label7.Hide()
             Dim constrig As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
@@ -75,5 +93,13 @@ Public Class Form4
         Label4.Text = "Upi ID"
         Label5.Visible = False
         TextBox2.Visible = False
+        Label9.Visible = False
+        TextBox3.Visible = False
+    End Sub
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+        If Not Char.IsLetter(e.KeyChar) Then e.Handled = True 'ignore everything but letter keys
+    End Sub
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        If Not Char.IsLetter(e.KeyChar) Then e.Handled = True 'ignore everything but letter keys
     End Sub
 End Class
