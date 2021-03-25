@@ -32,6 +32,8 @@ Partial Class Form4
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -44,8 +46,6 @@ Partial Class Form4
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -166,6 +166,22 @@ Partial Class Form4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pay"
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(139, 172)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(42, 20)
+        Me.TextBox3.TabIndex = 19
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(17, 175)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(37, 13)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "CVV : "
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -277,27 +293,11 @@ Partial Class Form4
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(20, 67)
+        Me.Label8.Location = New System.Drawing.Point(596, 496)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(71, 13)
         Me.Label8.TabIndex = 44
         Me.Label8.Text = "AADHAR NO"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(17, 175)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(37, 13)
-        Me.Label9.TabIndex = 18
-        Me.Label9.Text = "CVV : "
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(139, 172)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(42, 20)
-        Me.TextBox3.TabIndex = 19
         '
         'Form4
         '

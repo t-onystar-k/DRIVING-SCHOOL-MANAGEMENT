@@ -4,6 +4,7 @@ Public Class Form4
     Dim cmd As New SqlCommand
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Payment"
+        Label8.Text = form5.Label2.Text
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -32,7 +33,7 @@ Public Class Form4
 
         Else
             Label7.Hide()
-            Dim constrig As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT-main\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+            Dim constrig As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Driving School Management\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
             con = New SqlConnection(constrig)
             con.Open()
             cmd.Connection = con
