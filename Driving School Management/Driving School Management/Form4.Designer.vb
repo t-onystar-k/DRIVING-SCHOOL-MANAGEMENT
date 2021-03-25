@@ -44,6 +44,8 @@ Partial Class Form4
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -146,6 +148,8 @@ Partial Class Form4
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -166,17 +170,17 @@ Partial Class Form4
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.Color.Firebrick
-        Me.Label7.Location = New System.Drawing.Point(83, 203)
+        Me.Label7.Location = New System.Drawing.Point(145, 205)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(155, 13)
+        Me.Label7.Size = New System.Drawing.Size(42, 13)
         Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Please Fill in necessary details !"
+        Me.Label7.Text = "Label 7"
         Me.Label7.Visible = False
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(17, 173)
+        Me.Label5.Location = New System.Drawing.Point(17, 149)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 13)
         Me.Label5.TabIndex = 16
@@ -185,7 +189,7 @@ Partial Class Form4
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(17, 135)
+        Me.Label4.Location = New System.Drawing.Point(17, 119)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(73, 13)
         Me.Label4.TabIndex = 15
@@ -206,14 +210,14 @@ Partial Class Form4
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(139, 170)
+        Me.TextBox2.Location = New System.Drawing.Point(139, 146)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(168, 20)
         Me.TextBox2.TabIndex = 13
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(139, 132)
+        Me.TextBox1.Location = New System.Drawing.Point(139, 116)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(168, 20)
         Me.TextBox1.TabIndex = 12
@@ -279,6 +283,22 @@ Partial Class Form4
         Me.Label8.TabIndex = 44
         Me.Label8.Text = "AADHAR NO"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(17, 175)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(37, 13)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "CVV : "
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(139, 172)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(42, 20)
+        Me.TextBox3.TabIndex = 19
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -325,4 +345,6 @@ Partial Class Form4
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class
