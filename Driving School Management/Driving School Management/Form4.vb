@@ -98,9 +98,17 @@ Public Class Form4
         TextBox3.Visible = False
     End Sub
     Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
-        If Not Char.IsLetter(e.KeyChar) Then e.Handled = True 'ignore everything but letter keys
+        If Asc(e.KeyChar) <> 8 Then '' accept only numbers
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
     End Sub
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
-        If Not Char.IsLetter(e.KeyChar) Then e.Handled = True 'ignore everything but letter keys
+        If Asc(e.KeyChar) <> 8 Then '' accept only numbers
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class
