@@ -74,6 +74,6 @@ Public Class Form9
             Label10.Text = "Reviewed"
         Else
             Label10.Text = "Not Reviewed"
-        'End If
+        End If
     End Sub
 End Class

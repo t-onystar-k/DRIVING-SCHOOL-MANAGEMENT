@@ -5,74 +5,75 @@ Public Class Form4
     Dim sts1 As String
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Payment"
+        sts1 = "Not Paid"
         Label8.Text = form5.Label2.Text
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-
+        ''opens connection to db
+        con.Close()
+        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Driving School Management\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+        con.Open()
+        '' DO NOT DELETE ABOVE CODE
 
         If TextBox1.Text = "" Then
             Label7.Text = "Please Fill in necessary details !"
             Label7.Visible = True
             Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
 
-            '' if radio btn 1 checked
-        ElseIf RadioButton1.Checked = True Then
-            If TextBox3.Text.Length <> 16 Then
-                Label7.Text = "Please Fill in valid 16-digit card number !"
-                Label7.Visible = True
-                Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
+            '' cardno validatoion
+        ElseIf RadioButton1.Checked = True And TextBox1.Text.Length <> 16 Then
 
-            ElseIf TextBox3.Text.Length <> 3 Then
-                Label7.Text = "Please Fill in valid cvv !"
-                Label7.Visible = True
-                Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
-            End If
+            Label7.Text = "Please Fill in valid 16-digit card number !"
+            Label7.Visible = True
+            Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
 
+            ''cvv validation
+        ElseIf RadioButton1.Checked = True And TextBox3.Text.Length <> 3 Then
+            Label7.Text = "Please Fill in valid cvv !"
+            Label7.Visible = True
+            Label7.Left = (Label1.Parent.Width - Label1.Width) / 2
 
 
         Else
-            Label7.Hide()
-            Dim constrig As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Driving School Management\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
-            con = New SqlConnection(constrig)
-            con.Open()
-            cmd.Connection = con
-            cmd.CommandText = "INSERT INTO pay(Id,cash,cardno,cardname,uidno,cvv)values(@id,@cash,@cardno,@cardname,@uidno,@cvv)"
-            Dim parid As New SqlParameter("@Id", SqlDbType.VarChar, 15)
-            parid.Value = Label8.Text
-            Dim parcash As New SqlParameter("@cash", SqlDbType.VarChar, 7)
-            parcash.Value = Label6.Text
-            Dim parcardno As New SqlParameter("@cardno", SqlDbType.VarChar, 20)
-            parcardno.Value = TextBox1.Text
-            Dim parcardname As New SqlParameter("@cardname", SqlDbType.VarChar, 50)
-            parcardname.Value = TextBox2.Text
-            Dim paruidno As New SqlParameter("@uidno", SqlDbType.VarChar, 20)
-            paruidno.Value = TextBox1.Text
-            Dim parcvv As New SqlParameter("@cvv", SqlDbType.VarChar, 5)
-            parcvv.Value = TextBox3.Text
+        cmd.Connection = con
+        cmd.Parameters.Clear() ''important
 
-            cmd.Parameters.Add(parid)
-            cmd.Parameters.Add(parcash)
-            cmd.Parameters.Add(parcardno)
-            cmd.Parameters.Add(parcardname)
-            cmd.Parameters.Add(paruidno)
-            cmd.Parameters.Add(parcvv)
+        If RadioButton1.Checked = True Then ''if card is selected
+            cmd.CommandText = "UPDATE pay SET cash = @cash,cardno = @cardno, cardname = @cardname, cvv = @cvv WHERE Id = @id"
+        ElseIf RadioButton2.Checked = True Then ''if upi is selected
+            cmd.CommandText = "UPDATE pay SET cash = @cash, upi = @upi WHERE Id = @id"
+        End If
 
-            Dim da As New SqlDataAdapter
-            da.InsertCommand = cmd
-            da.InsertCommand.ExecuteNonQuery()
-            MsgBox("Payment Successful")
+        Dim parid As New SqlParameter("@Id", SqlDbType.VarChar, 15)
+        parid.Value = Label8.Text
+        Dim parcash As New SqlParameter("@cash", SqlDbType.VarChar, 7)
+        parcash.Value = Label6.Text
+        Dim parcardno As New SqlParameter("@cardno", SqlDbType.VarChar, 20)
+        parcardno.Value = TextBox1.Text
+        Dim parcardname As New SqlParameter("@cardname", SqlDbType.VarChar, 50)
+        parcardname.Value = TextBox2.Text
+        Dim parupi As New SqlParameter("@upi", SqlDbType.VarChar, 20)
+        parupi.Value = TextBox1.Text
+        Dim parcvv As New SqlParameter("@cvv", SqlDbType.VarChar, 5)
+        parcvv.Value = TextBox3.Text
 
+        cmd.Parameters.Add(parid)
+        cmd.Parameters.Add(parcash)
+        cmd.Parameters.Add(parcardno)
+        cmd.Parameters.Add(parcardname)
+        cmd.Parameters.Add(parupi)
+        cmd.Parameters.Add(parcvv)
+
+        cmd.ExecuteNonQuery()
+
+        MsgBox("Payment Successful")
+        sts1 = "paid"
 
         End If
-        If TextBox1.Text = " " Then
-            sts1 = "Not Paid"
-        Else
-            sts1 = "paid"
-        End If
-        con.Open()
+
         cmd1.Connection = con
+        cmd1.Parameters.Clear() ''important
         cmd1.CommandText = "UPDATE status SET payment_sts = @payment_sts where id = @id"
         Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
         paramid.Value = Label8.Text
@@ -82,12 +83,8 @@ Public Class Form4
         cmd1.Parameters.Add(parsts)
         cmd1.Parameters.Add(paramid)
 
-        Dim da1 As New SqlDataAdapter
-        da1.InsertCommand = cmd1
-        da1.InsertCommand.ExecuteNonQuery()
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
+        cmd1.ExecuteNonQuery()
+
 
     End Sub
 
@@ -116,6 +113,9 @@ Public Class Form4
         TextBox2.Visible = True
         TextBox3.Visible = True
         Label9.Visible = True
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
 
     End Sub
 
@@ -134,9 +134,11 @@ Public Class Form4
         End If
     End Sub
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
-        If Asc(e.KeyChar) <> 8 Then '' accept only numbers
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
+        If RadioButton1.Checked = True Then ''only if card selected
+            If Asc(e.KeyChar) <> 8 Then '' accept only numbers
+                If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                    e.Handled = True
+                End If
             End If
         End If
     End Sub

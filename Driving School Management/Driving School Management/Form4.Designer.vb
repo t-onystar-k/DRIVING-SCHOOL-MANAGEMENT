@@ -245,13 +245,13 @@ Partial Class Form4
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(219, 17)
         Me.RadioButton2.TabIndex = 9
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "UPI payment (GooglePay/Phone pe etc.)"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
         Me.RadioButton1.Location = New System.Drawing.Point(59, 62)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(110, 17)
