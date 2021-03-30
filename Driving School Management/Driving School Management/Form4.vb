@@ -1,7 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form4
     Dim con As New SqlConnection
-    Dim cmd As New SqlCommand
+    Dim cmd, cmd1 As New SqlCommand
+    Dim sts1 As String
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Payment"
         Label8.Text = form5.Label2.Text
@@ -37,7 +38,7 @@ Public Class Form4
             con = New SqlConnection(constrig)
             con.Open()
             cmd.Connection = con
-            cmd.CommandText = "INSERT INTO pay(Id,cash,cardno,cardname,uidno)values(@id,@cash,@cardno,@cardname,@uidno)"
+            cmd.CommandText = "INSERT INTO pay(Id,cash,cardno,cardname,uidno,cvv)values(@id,@cash,@cardno,@cardname,@uidno,@cvv)"
             Dim parid As New SqlParameter("@Id", SqlDbType.VarChar, 15)
             parid.Value = Label8.Text
             Dim parcash As New SqlParameter("@cash", SqlDbType.VarChar, 7)
@@ -48,21 +49,46 @@ Public Class Form4
             parcardname.Value = TextBox2.Text
             Dim paruidno As New SqlParameter("@uidno", SqlDbType.VarChar, 20)
             paruidno.Value = TextBox1.Text
+            Dim parcvv As New SqlParameter("@cvv", SqlDbType.VarChar, 5)
+            parcvv.Value = TextBox3.Text
 
             cmd.Parameters.Add(parid)
             cmd.Parameters.Add(parcash)
             cmd.Parameters.Add(parcardno)
             cmd.Parameters.Add(parcardname)
             cmd.Parameters.Add(paruidno)
+            cmd.Parameters.Add(parcvv)
 
             Dim da As New SqlDataAdapter
             da.InsertCommand = cmd
             da.InsertCommand.ExecuteNonQuery()
             MsgBox("Payment Successful")
-            TextBox1.Text = ""
-            TextBox2.Text = ""
+
 
         End If
+        If TextBox1.Text = " " Then
+            sts1 = "Not Paid"
+        Else
+            sts1 = "paid"
+        End If
+        con.Open()
+        cmd1.Connection = con
+        cmd1.CommandText = "UPDATE status SET payment_sts = @payment_sts where id = @id"
+        Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
+        paramid.Value = Label8.Text
+        Dim parsts As New SqlParameter("@payment_sts", SqlDbType.VarChar, 10)
+        parsts.Value = sts1
+
+        cmd1.Parameters.Add(parsts)
+        cmd1.Parameters.Add(paramid)
+
+        Dim da1 As New SqlDataAdapter
+        da1.InsertCommand = cmd1
+        da1.InsertCommand.ExecuteNonQuery()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -88,6 +114,9 @@ Public Class Form4
         Label4.Text = "Card Number :"
         Label5.Visible = True
         TextBox2.Visible = True
+        TextBox3.Visible = True
+        Label9.Visible = True
+
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged

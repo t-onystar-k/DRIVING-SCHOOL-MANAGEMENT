@@ -7,11 +7,11 @@ Public Class form6
         counter = counter + 1
         Me.Size = New Size(900, 540)
 
-        With Form3
+        With Form9
             .TopLevel = False
             .ControlBox = False
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
-            Panel6.Controls.Add(Form3)
+            Panel6.Controls.Add(Form9)
             .BringToFront()
             .Show()
         End With

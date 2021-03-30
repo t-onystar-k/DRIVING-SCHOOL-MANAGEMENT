@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form2
-    Dim con As New SqlConnection
-    Dim cmd As New SqlCommand
+    Dim con, con1 As New SqlConnection
+    Dim cmd, cmd1 As New SqlCommand
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim OpenFileDialog1 As New OpenFileDialog
@@ -181,6 +181,17 @@ Public Class Form2
             da.InsertCommand.ExecuteNonQuery()
             MsgBox("Application Submitted succesfully.")
         End If
+        cmd1.Connection = con
+        cmd1.CommandText = "INSERT INTO pay(id)values(@id)"
+        Dim paraid As New SqlParameter("@uid", SqlDbType.VarChar, 15)
+        paraid.Value = TextBox13.Text
+        cmd1.Parameters.Add(paraid)
+
+        Dim da1 As New SqlDataAdapter
+        da1.InsertCommand = cmd1
+        da1.InsertCommand.ExecuteNonQuery()
+
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
