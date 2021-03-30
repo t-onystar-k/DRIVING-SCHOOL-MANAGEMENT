@@ -2,7 +2,7 @@
 Imports System.Text.RegularExpressions
 Public Class Form7
     Dim con As New SqlConnection
-    Dim cmd As New SqlCommand
+    Dim cmd, cmd2 As New SqlCommand
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Label2.Visible = False
 
@@ -47,20 +47,43 @@ Public Class Form7
                 Label2.Left = (Label2.Parent.Width - Label2.Width) / 2
                 Label2.Visible = True
             Else
+
+                ''insert userlogin details
                 cmd.CommandText = "INSERT INTO users(aadhar,password)values(@aadhar,@password)"
                 Dim paramaadhar As New SqlParameter("@aadhar", SqlDbType.VarChar, 15)
                 paramaadhar.Value = TextBox1.Text
                 Dim parampassword As New SqlParameter("@password", SqlDbType.VarChar, 20)
                 parampassword.Value = TextBox2.Text
 
-
                 cmd.Parameters.Add(paramaadhar)
                 cmd.Parameters.Add(parampassword)
-
 
                 Dim da As New SqlDataAdapter
                 da.InsertCommand = cmd
                 da.InsertCommand.ExecuteNonQuery()
+
+                ''add userid to status table
+                cmd.Parameters.Clear()
+
+                cmd.CommandText = "INSERT INTO status(Id)values(@id)"
+                Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
+                paramid.Value = TextBox1.Text
+                cmd.Parameters.Add(paramid)
+
+                Dim da2 As New SqlDataAdapter
+                da2.InsertCommand = cmd
+                da2.InsertCommand.ExecuteNonQuery()
+
+                ''add userid to pay table
+                cmd.Parameters.Clear()
+
+                cmd.CommandText = "INSERT INTO pay(Id)values(@id)"
+
+                paramid.Value = TextBox1.Text
+                cmd.Parameters.Add(paramid)
+                cmd.ExecuteNonQuery()
+
+
                 MsgBox("Registered succesfully")
                 Form1.Show()
                 Me.Close()
