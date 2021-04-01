@@ -11,6 +11,7 @@
             .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form3)
+            .Label8.Text = Label2.Text
             .BringToFront()
             .Show()
         End With

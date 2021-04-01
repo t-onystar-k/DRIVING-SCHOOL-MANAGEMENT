@@ -25,21 +25,23 @@ Partial Class Form3
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -85,6 +87,16 @@ Partial Class Form3
         Me.Panel3.Size = New System.Drawing.Size(181, 62)
         Me.Panel3.TabIndex = 2
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(23, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(59, 16)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Label 2"
+        '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -126,6 +138,16 @@ Partial Class Form3
         Me.Panel5.Size = New System.Drawing.Size(181, 62)
         Me.Panel5.TabIndex = 2
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(60, 22)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(59, 16)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Label 6"
+        '
         'Panel6
         '
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -135,6 +157,16 @@ Partial Class Form3
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(181, 64)
         Me.Panel6.TabIndex = 1
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(22, 23)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(133, 16)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Application Status"
         '
         'PictureBox2
         '
@@ -167,6 +199,16 @@ Partial Class Form3
         Me.Panel8.Size = New System.Drawing.Size(181, 62)
         Me.Panel8.TabIndex = 2
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(60, 22)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 16)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Label 4"
+        '
         'Panel9
         '
         Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -176,26 +218,6 @@ Partial Class Form3
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(181, 64)
         Me.Panel9.TabIndex = 1
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(128, 126)
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(23, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Label 2"
         '
         'Label3
         '
@@ -207,35 +229,35 @@ Partial Class Form3
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Payment Status"
         '
-        'Label4
+        'PictureBox3
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(60, 22)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 16)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Label 4"
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(128, 126)
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
         '
-        'Label5
+        'Label7
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(22, 23)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(133, 16)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Application Status"
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(28, 18)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(88, 14)
+        Me.Label7.TabIndex = 5
+        Me.Label7.Text = "Aadhar Number"
         '
-        'Label6
+        'Label8
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(60, 22)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 16)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Label 6"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(137, 19)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(40, 14)
+        Me.Label8.TabIndex = 6
+        Me.Label8.Text = "Label8"
         '
         'Form3
         '
@@ -243,6 +265,8 @@ Partial Class Form3
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(714, 518)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
@@ -270,6 +294,7 @@ Partial Class Form3
         Me.Panel9.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -291,4 +316,6 @@ Partial Class Form3
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
 End Class
