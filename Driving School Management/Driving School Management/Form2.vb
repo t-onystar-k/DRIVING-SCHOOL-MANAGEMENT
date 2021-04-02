@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 Public Class Form2
     Dim con, con1 As New SqlConnection
     Dim cmd, cmd1 As New SqlCommand
@@ -24,7 +25,7 @@ Public Class Form2
 
 
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim OpenFileDialog1 As New OpenFileDialog
         OpenFileDialog1.InitialDirectory = "D:\"
         OpenFileDialog1.RestoreDirectory = True
@@ -34,7 +35,7 @@ Public Class Form2
             TextBox10.Text = System.IO.Path.GetFullPath(OpenFileDialog1.FileName)
         End If
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim OpenFileDialog1 As New OpenFileDialog
         OpenFileDialog1.InitialDirectory = "D:\"
         OpenFileDialog1.RestoreDirectory = True
@@ -44,7 +45,7 @@ Public Class Form2
             TextBox11.Text = System.IO.Path.GetFullPath(OpenFileDialog1.FileName)
         End If
     End Sub
-    Private Sub Button6_Click(sender As Object, e As EventArgs)
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
 
         Dim OpenFileDialog1 As New OpenFileDialog
         OpenFileDialog1.InitialDirectory = "D:\"
@@ -56,39 +57,42 @@ Public Class Form2
         End If
     End Sub
     Function IsValidEmailFormat(ByVal s As String) As Boolean
-        Try
-            Dim a As New System.Net.Mail.MailAddress(s)
-        Catch
+        Dim pattern As String
+        pattern = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
+
+        If Regex.IsMatch(s, pattern) Then
+            Return True
+        Else
             Return False
-        End Try
-        Return True
+        End If
     End Function
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
         ''''''' DATA VALIDATION - START
         Label1.Visible = False
-        Dim usermail = IsValidEmailFormat(TextBox9.Text)
-        ''if any details left unfilled
-        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox8.Text = "" Or TextBox9.Text = "" Or TextBox10.Text = "" Or TextBox12.Text = "" Or TextBox13.Text = "" Or TextBox14.Text = "" Or TextBox15.Text = "" Then
-            Label1.Text = "Please Fill in all details !"
-            Label1.Visible = True
-            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
             ''aadhar uid
-        ElseIf Not IsNumeric(TextBox13.Text) Or TextBox13.Text.Length <> 12 Then
+        If Not IsNumeric(TextBox13.Text) Or TextBox13.Text.Length <> 12 Then
             Label1.Text = "Aadhaar uid must be 12-digit numeric value !"
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
             Label1.Visible = True
-            '' eye cert
-        ElseIf RadioButton1.Checked = True And TextBox11.Text = "" Then
-            Label1.Text = "Please Fill in all details !"
-            Label1.Visible = True
-            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
             ''no photo uploaded
         ElseIf PictureBox1.Image Is Nothing Then
             Label1.Text = "Please upload your photo."
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''date of birth
+        ElseIf System.DateTime.Now.Year - DateTimePicker1.Value.Year < 18 Then '' checks age
+            Label1.Text = "You Should be atleast 18yo to apply !"
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            ''if any details left unfilled
+        ElseIf TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox8.Text = "" Or TextBox9.Text = "" Or TextBox10.Text = "" Or TextBox12.Text = "" Or TextBox13.Text = "" Or TextBox14.Text = "" Or TextBox15.Text = "" Then
+            Label1.Text = "Please Fill in all details !"
             Label1.Visible = True
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
@@ -105,7 +109,7 @@ Public Class Form2
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
             ''email format
-        ElseIf usermail = False Then
+        ElseIf IsValidEmailFormat(TextBox9.Text) = False Then
             Label1.Text = "Invalid Email format"
             Label1.Visible = True
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
@@ -113,6 +117,12 @@ Public Class Form2
             ''pin number
         ElseIf TextBox7.Text.Length <> 6 Or TextBox7.Text < 100000 Or Not IsNumeric(TextBox7.Text) Then
             Label1.Text = "Invalid PIN"
+            Label1.Visible = True
+            Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
+
+            '' eye cert
+        ElseIf RadioButton1.Checked = True And TextBox11.Text = "" Then
+            Label1.Text = "Please upload eye-test result!"
             Label1.Visible = True
             Label1.Left = (Label1.Parent.Width - Label1.Width) / 2
 
@@ -180,16 +190,21 @@ Public Class Form2
             da.InsertCommand = cmd
             da.InsertCommand.ExecuteNonQuery()
             MsgBox("Application Submitted succesfully.")
-        End If
-        cmd1.Connection = con
-        cmd1.CommandText = "INSERT INTO pay(id)values(@id)"
-        Dim paraid As New SqlParameter("@uid", SqlDbType.VarChar, 15)
-        paraid.Value = TextBox13.Text
-        cmd1.Parameters.Add(paraid)
 
-        Dim da1 As New SqlDataAdapter
-        da1.InsertCommand = cmd1
-        da1.InsertCommand.ExecuteNonQuery()
+            ''update status table
+            cmd1.Connection = con
+            cmd1.Parameters.Clear() ''important
+            cmd1.CommandText = "UPDATE status SET app_sub = @application_sts where id = @id"
+            Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
+            paramid.Value = TextBox13.Text
+            Dim parsts As New SqlParameter("@application_sts", SqlDbType.VarChar, 10)
+            parsts.Value = "Submitted"
+
+            cmd1.Parameters.Add(parsts)
+            cmd1.Parameters.Add(paramid)
+
+            cmd1.ExecuteNonQuery()
+        End If
 
 
     End Sub
@@ -235,7 +250,21 @@ Public Class Form2
 
     End Sub
 
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    ''accept only numbers 
+    Private Sub TextBox7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox7.KeyPress
+        If Asc(e.KeyChar) <> 8 Then '' accept only numbers
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
     End Sub
+
+    Private Sub TextBox14_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox14.KeyPress
+        If Asc(e.KeyChar) <> 8 Then '' accept only numbers
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+    ''
 End Class

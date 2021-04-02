@@ -20,7 +20,7 @@ Public Class form6
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If counter <> 1 Then
             counter = 1
-            Form3.Close()
+            Form9.Close()
             Me.Size = New Size(900, 662)
         End If
 
@@ -29,7 +29,12 @@ Public Class form6
 
 
     Private Sub form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Driving School Management\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+        ''appearence
+        Me.ControlBox = False
+        Me.Text = ""
+        ''appearence-end
+
+        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
         con.Open()
         cmd.Connection = con
         cmd.CommandText = "select uid from reg"
