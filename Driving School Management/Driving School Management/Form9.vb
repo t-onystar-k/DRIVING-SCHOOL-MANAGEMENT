@@ -27,6 +27,9 @@ Public Class Form9
         cmd2.Connection = con
         cmd1.CommandText = "Select fname,mname,lname from reg where uid =" & "(@uid)"
         cmd2.CommandText = "select cash,cardno,cardname,upi from pay where id=" & "(@uid)"
+        cmd1.Parameters.Clear() ''important
+        cmd2.Parameters.Clear() ''important
+
         Dim paramid As New SqlParameter("@uid", SqlDbType.VarChar, 15)
         paramid.Direction = ParameterDirection.Input
         paramid.Value = a
@@ -47,53 +50,51 @@ Public Class Form9
         dr3 = cmd2.ExecuteReader
         Do While dr3.Read
             Label7.Text = dr3("cash")
-
+        Loop
+        dr3.Close()
+        cmd2.CommandText = "SELECT * from status where id=@uid"
+        cmd2.Parameters.Clear() ''important
+        cmd2.Parameters.Add(paramuid)
+        dr3 = cmd2.ExecuteReader
+        Do While dr3.Read
+            Label10.Text = dr3("admin_rev")
         Loop
         dr3.Close()
 
 
 
         If Label1.Text <> "NULL" Then
-            TextBox1.Text = "Applied"
+            Label11.Text = "Applied"
         Else
-            TextBox1.Text = "Not Applied"
+            Label11.Text = "Not Applied"
         End If
 
         If IsNumeric(Label7.Text) Then
-            TextBox2.Text = "Paid"
+            label12.Text = "Paid"
         Else
-            TextBox2.Text = "Not Paid"
+            label12.Text = "Not Paid"
         End If
 
 
-
-
-
-    End Sub
-
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
-            Label10.Text = "Reviewed"
-        Else
-            Label10.Text = "Not Reviewed"
-        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         cmd1.Connection = con
+        cmd1.Parameters.Clear() ''important
 
-        cmd1.CommandText = "insert into status(payment_sts,admin_rev,app_sub)values(@payment_sts,@admin_rev,@app_sub) where id=" + ComboBox1.SelectedItem + ""
-        Dim parpsts As New SqlParameter("@payment_sts", SqlDbType.VarChar, 10)
-        parpsts.Value = TextBox2.Text
+        cmd1.CommandText = "UPDATE status SET admin_rev = @admin_rev WHERE id = @id"
+        Dim paraid As New SqlParameter("@id", SqlDbType.VarChar, 15)
+        paraid.Value = ComboBox1.SelectedItem
         Dim paradrev As New SqlParameter("@admin_rev", SqlDbType.VarChar, 10)
-        paradrev.Value = Label10.Text
-        Dim parapsub As New SqlParameter("@app_sub", SqlDbType.VarChar, 10)
-        parapsub.Value = TextBox1.Text
+        If RadioButton1.Checked = True Then
+            paradrev.Value = RadioButton1.Text
+        ElseIf RadioButton2.Checked = True Then
+            paradrev.Value = RadioButton2.Text
+        End If
 
-        cmd1.Parameters.Add(parapsub)
+        cmd1.Parameters.Add(paraid)
         cmd1.Parameters.Add(paradrev)
-        cmd1.Parameters.Add(parpsts)
 
         Dim da1 As New SqlDataAdapter
         da1.InsertCommand = cmd1
