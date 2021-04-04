@@ -204,6 +204,8 @@ Public Class Form2
             cmd1.Parameters.Add(paramid)
 
             cmd1.ExecuteNonQuery()
+
+            form5.Button1.PerformClick() ''shows dashboard after successful submission
         End If
 
 
@@ -267,4 +269,8 @@ Public Class Form2
         End If
     End Sub
     ''
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

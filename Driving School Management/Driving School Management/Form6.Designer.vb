@@ -71,10 +71,12 @@ Partial Class form6
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel6
@@ -529,6 +531,7 @@ Partial Class form6
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Label17)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
@@ -541,6 +544,16 @@ Partial Class form6
         'PrintDialog1
         '
         Me.PrintDialog1.UseEXDialog = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.Color.White
+        Me.Label17.Location = New System.Drawing.Point(3, 4)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(45, 13)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Label17"
         '
         'form6
         '
@@ -560,6 +573,8 @@ Partial Class form6
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -645,6 +660,7 @@ Partial Class form6
             isMouseDown = False
         End If
     End Sub
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 
     '
     '

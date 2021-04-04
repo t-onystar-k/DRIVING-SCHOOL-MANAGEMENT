@@ -17,7 +17,6 @@ Public Class form5
             .Text = ""
             .FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Panel6.Controls.Add(Form3)
-            .Label8.Text = Label2.Text
             .BringToFront()
             .Show()
         End With
@@ -25,7 +24,7 @@ Public Class form5
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click ''application submission
         Panel6.Controls.Clear()
-        Me.Size = New Size(900, 732)
+        Me.Size = New Size(900, 695)
         'centering form
         Me.Location = New Point((Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2)
 
@@ -96,6 +95,8 @@ Public Class form5
     End Sub
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Button1.PerformClick() ''shows dashboard on loading
+
         Me.ControlBox = False
         Me.Text = ""
 
