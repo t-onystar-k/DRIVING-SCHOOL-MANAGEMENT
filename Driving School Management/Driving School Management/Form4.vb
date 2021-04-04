@@ -85,6 +85,7 @@ Public Class Form4
 
         cmd1.ExecuteNonQuery()
 
+        form5.Button1.PerformClick() ''shows dashboard after successful submission
 
     End Sub
 

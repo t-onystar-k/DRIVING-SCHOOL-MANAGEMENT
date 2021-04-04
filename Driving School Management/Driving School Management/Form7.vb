@@ -125,6 +125,7 @@ Public Class Form7
     Private Sub TextBox2_MouseEnter(sender As Object, e As EventArgs) Handles TextBox2.MouseEnter
         If TextBox2.Text = "Enter Password" Then
             TextBox2.Text = ""
+            TextBox2.PasswordChar = ""
             TextBox2.ForeColor = Color.Black
         End If
     End Sub
@@ -140,6 +141,7 @@ Public Class Form7
         If TextBox2.Text = "Enter Password" Then
             TextBox2.Text = ""
             TextBox2.ForeColor = Color.Black
+            TextBox2.PasswordChar = "*"
         End If
     End Sub
 
@@ -153,6 +155,7 @@ Public Class Form7
     Private Sub TextBox3_MouseLeave(sender As Object, e As EventArgs) Handles TextBox3.MouseLeave
         If TextBox3.Text = "" Then
             TextBox3.Text = "Confirm Password"
+            TextBox3.PasswordChar = ""
             TextBox3.ForeColor = Color.Gray
         End If
     End Sub
@@ -163,6 +166,16 @@ Public Class Form7
         End If
         TextBox3.ForeColor = Color.Black
         TextBox3.PasswordChar = "*"
+    End Sub
+
+    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
+        If CheckBox3.Checked = True Then
+            TextBox2.PasswordChar = ""
+            TextBox3.PasswordChar = ""
+        Else
+            TextBox2.PasswordChar = "*"
+            TextBox3.PasswordChar = "*"
+        End If
     End Sub
 
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load

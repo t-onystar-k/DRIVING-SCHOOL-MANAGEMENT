@@ -62,8 +62,7 @@ Public Class Form1
         Else
             ''IF Admin Login Selected
             If TextBox1.Text = "Admin2021" And TextBox2.Text = "pass2021" Then
-                MessageBox.Show("Logged in succesfully")
-                ''form6.Label2.Text = TextBox1.Text
+                form6.Label17.Text = TextBox1.Text
                 form6.Show()
                 Me.Hide()
             Else

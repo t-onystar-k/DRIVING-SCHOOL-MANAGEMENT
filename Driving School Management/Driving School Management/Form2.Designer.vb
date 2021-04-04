@@ -295,7 +295,6 @@ Partial Class Form2
         'TextBox13
         '
         Me.TextBox13.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox13.Location = New System.Drawing.Point(98, 19)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(139, 20)
@@ -531,7 +530,7 @@ Partial Class Form2
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label19)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -566,7 +565,7 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(714, 690)
+        Me.ClientSize = New System.Drawing.Size(714, 671)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)

@@ -38,6 +38,7 @@ Partial Class Form7
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -144,7 +145,7 @@ Partial Class Form7
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(102, 258)
+        Me.Button1.Location = New System.Drawing.Point(102, 288)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 27)
         Me.Button1.TabIndex = 19
@@ -180,6 +181,7 @@ Partial Class Form7
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.CheckBox3)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.Panel2)
@@ -196,7 +198,7 @@ Partial Class Form7
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Firebrick
         Me.Label2.ForeColor = System.Drawing.Color.GhostWhite
-        Me.Label2.Location = New System.Drawing.Point(135, 238)
+        Me.Label2.Location = New System.Drawing.Point(135, 268)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 21
@@ -211,6 +213,16 @@ Partial Class Form7
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(884, 25)
         Me.Panel5.TabIndex = 23
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(203, 241)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(101, 17)
+        Me.CheckBox3.TabIndex = 22
+        Me.CheckBox3.Text = "Show password"
+        Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'Form7
         '
@@ -286,6 +298,7 @@ Partial Class Form7
         End If
     End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
 
     '
     '
