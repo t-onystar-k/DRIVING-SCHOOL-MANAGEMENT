@@ -70,8 +70,8 @@ Public Class Form7
                 paramid.Value = TextBox1.Text
                 Dim paramadmin_rev As New SqlParameter("@admin_rev", SqlDbType.VarChar, 15)
                 paramadmin_rev.Value = "Pending"
-                Dim paramapp_sub As New SqlParameter("@app_sub", SqlDbType.VarChar, 15)
-                paramadmin_rev.Value = "Pending"
+                Dim paramapp_sub As New SqlParameter("@app_sub", SqlDbType.VarChar, 10)
+                paramapp_sub.Value = "Pending"
                 cmd.Parameters.Add(paramid)
                 cmd.Parameters.Add(paramadmin_rev)
                 cmd.Parameters.Add(paramapp_sub)
