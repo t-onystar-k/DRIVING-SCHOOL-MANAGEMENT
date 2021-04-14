@@ -65,16 +65,19 @@ Public Class Form7
                 ''add userid to status table
                 cmd.Parameters.Clear()
 
-                cmd.CommandText = "INSERT INTO status(Id, admin_rev, app_sub)values(@id, @admin_rev, @app_sub)"
+                cmd.CommandText = "INSERT INTO status(Id, admin_rev, app_sub, payment_sts)values(@id, @admin_rev, @app_sub, @payment_sts)"
                 Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
                 paramid.Value = TextBox1.Text
                 Dim paramadmin_rev As New SqlParameter("@admin_rev", SqlDbType.VarChar, 15)
                 paramadmin_rev.Value = "Pending"
                 Dim paramapp_sub As New SqlParameter("@app_sub", SqlDbType.VarChar, 10)
                 paramapp_sub.Value = "Pending"
+                Dim parampayment_sts As New SqlParameter("@payment_sts", SqlDbType.VarChar, 10)
+                parampayment_sts.Value = "Pending"
                 cmd.Parameters.Add(paramid)
                 cmd.Parameters.Add(paramadmin_rev)
                 cmd.Parameters.Add(paramapp_sub)
+                cmd.Parameters.Add(parampayment_sts)
 
                 Dim da2 As New SqlDataAdapter
                 da2.InsertCommand = cmd
