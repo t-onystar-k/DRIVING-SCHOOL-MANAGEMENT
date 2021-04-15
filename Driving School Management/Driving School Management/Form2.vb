@@ -254,6 +254,7 @@ Public Class Form2
 
     ''accept only numbers 
     Private Sub TextBox7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox7.KeyPress
+
         If Asc(e.KeyChar) <> 8 Then '' accept only numbers
             If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
                 e.Handled = True
@@ -262,6 +263,7 @@ Public Class Form2
     End Sub
 
     Private Sub TextBox14_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox14.KeyPress
+        
         If Asc(e.KeyChar) <> 8 Then '' accept only numbers
             If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
                 e.Handled = True

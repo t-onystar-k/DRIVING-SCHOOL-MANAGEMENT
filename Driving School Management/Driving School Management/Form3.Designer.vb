@@ -50,11 +50,11 @@ Partial Class Form3
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(76, 3)
+        Me.Label1.Location = New System.Drawing.Point(36, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 20)
+        Me.Label1.Size = New System.Drawing.Size(173, 20)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Application"
+        Me.Label1.Text = "Application Submission"
         '
         'Label2
         '
@@ -85,9 +85,9 @@ Partial Class Form3
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(51, 3)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(137, 20)
+        Me.Label5.Size = New System.Drawing.Size(143, 20)
         Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Application Status"
+        Me.Label5.Text = "Application Review"
         '
         'Label4
         '
