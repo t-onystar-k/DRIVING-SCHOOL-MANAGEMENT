@@ -146,10 +146,10 @@ Public Class Form7
 
     Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
         If TextBox2.Text = "Enter Password" Then
-            TextBox2.Text = ""
-            TextBox2.ForeColor = Color.Black
-            TextBox2.PasswordChar = "*"
+            TextBox2.Clear()
         End If
+        TextBox2.ForeColor = Color.Black
+        TextBox2.PasswordChar = "*"
     End Sub
 
     Private Sub TextBox3_MouseEnter(sender As Object, e As EventArgs) Handles TextBox3.MouseEnter
