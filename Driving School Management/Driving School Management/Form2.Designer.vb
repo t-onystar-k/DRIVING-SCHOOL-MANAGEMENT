@@ -658,7 +658,11 @@ Partial Class Form2
         End If
     End Sub
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
-        If Not Char.IsLetter(e.KeyChar) Then e.Handled = True 'ignore everything but letter keys
+        If e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = False
+        ElseIf Not Char.IsLetter(e.KeyChar) Then
+            e.Handled = True 'ignore everything but letter keys
+        End If
         If TextBox1.Text = "First Name" Then
             TextBox1.Text = ""
             TextBox1.ForeColor = Color.Black
@@ -679,7 +683,11 @@ Partial Class Form2
         End If
     End Sub
     Private Sub textbox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
-        If Not Char.IsLetter(e.KeyChar) Then e.Handled = True 'ignore everything but letter keys
+        If e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = False
+        ElseIf Not Char.IsLetter(e.KeyChar) Then
+            e.Handled = True 'ignore everything but letter keys
+        End If
         If TextBox2.Text = "Middle Name" Then
             TextBox2.Text = ""
             TextBox2.ForeColor = Color.Black
@@ -700,7 +708,11 @@ Partial Class Form2
         End If
     End Sub
     Private Sub textbox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
-        If Not Char.IsLetter(e.KeyChar) Then e.Handled = True 'ignore everything but letter keys
+        If e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = False
+        ElseIf Not Char.IsLetter(e.KeyChar) Then
+            e.Handled = True 'ignore everything but letter keys
+        End If
         If TextBox3.Text = "Last Name" Then
             TextBox3.Text = ""
             TextBox3.ForeColor = Color.Black
