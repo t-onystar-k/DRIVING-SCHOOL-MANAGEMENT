@@ -4,8 +4,10 @@ Public Class form6
     Dim cmd As New SqlCommand
     Dim counter = 1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form10.Close()
         counter = counter + 1
         Me.Size = New Size(900, 540)
+        Me.Location = New Point((Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2)
 
         With Form9
             .TopLevel = False
@@ -17,11 +19,28 @@ Public Class form6
         End With
     End Sub
 
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        counter = counter + 1
+        Me.Size = New Size(900, 540)
+        Me.Location = New Point((Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2)
+
+        With Form10
+            .TopLevel = False
+            .ControlBox = False
+            .FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            Panel6.Controls.Add(Form10)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If counter <> 1 Then
             counter = 1
             Form9.Close()
+            Form10.Close()
             Me.Size = New Size(900, 662)
+            Me.Location = New Point((Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2)
         End If
 
     End Sub
@@ -125,4 +144,6 @@ Public Class form6
         Me.Close()
 
     End Sub
+
+    
 End Class
