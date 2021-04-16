@@ -120,3 +120,4 @@ D:\Driving School Management\DRIVING-SCHOOL-MANAGEMENT\Driving School Management
 D:\Driving School Management\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\obj\Debug\Driving School Management.exe
 D:\Driving School Management\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\obj\Debug\Driving School Management.xml
 D:\Driving School Management\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\obj\Debug\Driving School Management.pdb
+D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\obj\Debug\Driving_School_Management.Form10.resources

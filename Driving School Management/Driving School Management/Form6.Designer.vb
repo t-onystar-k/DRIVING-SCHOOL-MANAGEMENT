@@ -69,9 +69,10 @@ Partial Class form6
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.Panel6.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -442,6 +443,7 @@ Partial Class form6
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Button9)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -538,13 +540,6 @@ Partial Class form6
         Me.Panel3.Size = New System.Drawing.Size(856, 22)
         Me.Panel3.TabIndex = 4
         '
-        'PrintDocument1
-        '
-        '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.UseEXDialog = True
-        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -554,6 +549,32 @@ Partial Class form6
         Me.Label17.Size = New System.Drawing.Size(45, 13)
         Me.Label17.TabIndex = 1
         Me.Label17.Text = "Label17"
+        '
+        'PrintDocument1
+        '
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'Button9
+        '
+        Me.Button9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.Button9.FlatAppearance.BorderSize = 0
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.ForeColor = System.Drawing.Color.White
+        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
+        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button9.Location = New System.Drawing.Point(0, 219)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.Button9.Size = New System.Drawing.Size(185, 38)
+        Me.Button9.TabIndex = 7
+        Me.Button9.Text = "Report"
+        Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button9.UseVisualStyleBackColor = True
         '
         'form6
         '
@@ -661,6 +682,7 @@ Partial Class form6
         End If
     End Sub
     Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Button9 As System.Windows.Forms.Button
 
     '
     '
