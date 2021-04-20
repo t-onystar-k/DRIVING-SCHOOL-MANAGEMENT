@@ -6,6 +6,10 @@ Public Class form5
     Public application_status, payment_status, Admin_review As String '' to store statusses
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ''close all open forms within form 5
+        Form2.Close()
+        Form4.Close()
+
         Panel6.Controls.Clear()
         Me.Size = New Size(900, 550)
         'centering form
@@ -23,6 +27,10 @@ Public Class form5
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click ''application submission
+        ''close all open forms within form 5
+        Form3.Close()
+        Form4.Close()
+
         Panel6.Controls.Clear()
         Me.Size = New Size(900, 695)
         'centering form
@@ -65,6 +73,10 @@ Public Class form5
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click '' payment
+        ''close all open forms within form 5
+        Form2.Close()
+        Form3.Close()
+
         Panel6.Controls.Clear()
         Me.Size = New Size(900, 550)
         'centering form
