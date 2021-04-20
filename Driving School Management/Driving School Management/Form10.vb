@@ -57,10 +57,10 @@ Public Class Form10
 
         Label8.Text = PendingCount
 
-        ''updating review table
+        ''updating report table
 
         cmd.Parameters.Clear() ''important
-        cmd.CommandText = "UPDATE review SET accepted_count = @accepted_count, rejected_count = @rejected_count, pending_count = @pending_count"
+        cmd.CommandText = "UPDATE report SET accepted_count = @accepted_count, rejected_count = @rejected_count, pending_count = @pending_count"
 
         Dim accepted As New SqlParameter("@accepted_count", SqlDbType.VarChar, 50)
         accepted.Value = AcceptedCount

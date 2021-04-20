@@ -43,6 +43,10 @@ Public Class Form3
             Label7.Text = "Your Application has been Rejected ! Please resubmit application with correct details !"
             Label7.ForeColor = Color.FromArgb(255, 111, 105)
             Label7.Left = (Label7.Parent.Width - Label7.Width) / 2
+        ElseIf Label2.Text = "Pending" Then
+            Label7.Text = "You have not submitted the application yet !"
+            Label7.ForeColor = Color.White
+            Label7.Left = (Label7.Parent.Width - Label7.Width) / 2
         Else
             Label7.Text = "Your Application is pending review ! Please be patient."
             Label7.ForeColor = Color.White
