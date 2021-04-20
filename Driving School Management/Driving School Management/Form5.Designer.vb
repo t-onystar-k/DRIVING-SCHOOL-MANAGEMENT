@@ -122,7 +122,7 @@ Partial Class form5
         Me.Button1.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.Button1.Size = New System.Drawing.Size(185, 38)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Dashboard"
+        Me.Button1.Text = "Status"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True

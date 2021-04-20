@@ -70,7 +70,7 @@ Public Class form6
         Dim dr2 As SqlDataReader
         Dim cmd2 As New SqlCommand
         cmd2.Connection = con
-        cmd2.CommandText = "select * from reg where uid=" & "(@uid)"
+        cmd2.CommandText = "select * from reg where uid = @uid"
         Dim parameterstate As New SqlParameter("@uid", SqlDbType.VarChar, 15)
         parameterstate.Direction = ParameterDirection.Input
         parameterstate.Value = ComboBox1.SelectedItem
