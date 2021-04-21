@@ -57,6 +57,7 @@ Public Class Form10
 
         Label8.Text = PendingCount
 
+        Label10.Text = Convert.ToInt32(Label4.Text) + Convert.ToInt32(Label6.Text) + Convert.ToInt32(Label8.Text)
         ''updating report table
 
         cmd.Parameters.Clear() ''important
