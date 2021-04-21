@@ -194,14 +194,17 @@ Public Class Form2
             ''update status table
             cmd1.Connection = con
             cmd1.Parameters.Clear() ''important
-            cmd1.CommandText = "UPDATE status SET app_sub = @application_sts where id = @id"
+            cmd1.CommandText = "UPDATE status SET app_sub = @application_sts, admin_rev = @admin_rev where id = @id"
             Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
             paramid.Value = TextBox13.Text
             Dim parsts As New SqlParameter("@application_sts", SqlDbType.VarChar, 10)
             parsts.Value = "Submitted"
+            Dim paramadmin_rev As New SqlParameter("@admin_rev", SqlDbType.VarChar, 15)
+            paramadmin_rev.Value = "Pending"
 
             cmd1.Parameters.Add(parsts)
             cmd1.Parameters.Add(paramid)
+            cmd1.Parameters.Add(paramadmin_rev)
 
             cmd1.ExecuteNonQuery()
 
