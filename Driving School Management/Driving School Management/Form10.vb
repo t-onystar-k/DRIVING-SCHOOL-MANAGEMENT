@@ -79,4 +79,24 @@ Public Class Form10
 
 
     End Sub
+
+    
+    Private Sub Label11_MouseEnter(sender As Object, e As EventArgs) Handles Label11.MouseEnter
+        Label11.ForeColor = Color.DeepSkyBlue
+    End Sub
+
+    Private Sub Label11_MouseLeave(sender As Object, e As EventArgs) Handles Label11.MouseLeave
+        Label11.ForeColor = Color.DarkGray
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+        With Form11
+            .TopLevel = False
+            .ControlBox = False
+            .FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            form6.Panel6.Controls.Add(Form11)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
 End Class
