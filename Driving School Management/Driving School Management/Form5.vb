@@ -6,6 +6,30 @@ Public Class form5
     Public application_status, payment_status, Admin_review As String '' to store statusses
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ''loads status
+
+        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandText = "SELECT * FROM status WHERE id = @id"
+        cmd.Parameters.Clear()
+
+        Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
+        paramid.Value = Label2.Text
+        cmd.Parameters.Add(paramid)
+
+        Dim dr1 As SqlDataReader
+        dr1 = cmd.ExecuteReader
+        Do While dr1.Read
+            application_status = dr1("app_sub")
+            payment_status = dr1("payment_sts")
+            Admin_review = dr1("admin_rev")
+        Loop
+        dr1.Close()
+        con.Close()
+
+        ''status loading -- end
+
         ''close all open forms within form 5
         Form2.Close()
         Form4.Close()
@@ -111,33 +135,11 @@ Public Class form5
 
         Me.ControlBox = False
         Me.Text = ""
-
-        ''loads status
-
-        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
-        con.Open()
-        cmd.Connection = con
-        cmd.CommandText = "SELECT * FROM status WHERE id = @id"
-        cmd.Parameters.Clear()
-
-        Dim paramid As New SqlParameter("@id", SqlDbType.VarChar, 15)
-        paramid.Value = Label2.Text
-        cmd.Parameters.Add(paramid)
-
-        Dim dr1 As SqlDataReader
-        dr1 = cmd.ExecuteReader
-        Do While dr1.Read
-            application_status = dr1("app_sub")
-            payment_status = dr1("payment_sts")
-            Admin_review = dr1("admin_rev")
-        Loop
-        dr1.Close()
-        ''status loading -- end
+        
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Form1.Show()
         Me.Close()
-
     End Sub
 End Class

@@ -23,6 +23,8 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -53,6 +55,8 @@ Partial Class Form4
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label2)
@@ -66,6 +70,26 @@ Partial Class Form4
         Me.GroupBox2.Size = New System.Drawing.Size(326, 265)
         Me.GroupBox2.TabIndex = 24
         Me.GroupBox2.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label11.Location = New System.Drawing.Point(186, 176)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(19, 13)
+        Me.Label11.TabIndex = 9
+        Me.Label11.Text = "(?)"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label10.Location = New System.Drawing.Point(2, 213)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(321, 13)
+        Me.Label10.TabIndex = 8
+        Me.Label10.Text = "Fee calculation: 2000 /- license application fee + vehicle tution fee"
         '
         'Button2
         '
@@ -347,4 +371,6 @@ Partial Class Form4
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

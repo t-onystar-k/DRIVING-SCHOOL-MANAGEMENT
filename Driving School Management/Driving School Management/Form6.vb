@@ -39,6 +39,7 @@ Public Class form6
             counter = 1
             Form9.Close()
             Form10.Close()
+            Form11.Close()
             Me.Size = New Size(900, 662)
             Me.Location = New Point((Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2)
         End If
