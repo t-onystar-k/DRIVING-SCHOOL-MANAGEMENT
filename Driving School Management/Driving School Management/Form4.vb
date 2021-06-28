@@ -14,7 +14,7 @@ Public Class Form4
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ''opens connection to db
         con.Close()
-        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database0.mdf;Integrated Security=True"
         con.Open()
         '' DO NOT DELETE ABOVE CODE
 

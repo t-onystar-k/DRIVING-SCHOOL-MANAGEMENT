@@ -11,7 +11,7 @@ Public Class Form3
         ''
 
         Dim dr As SqlDataReader
-        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+        con.ConnectionString = "Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database0.mdf;Integrated Security=True"
         con.Open()
         cmd.Connection = con
         cmd.CommandText = "Select app_sub,payment_sts,admin_rev from status where id = @uid"

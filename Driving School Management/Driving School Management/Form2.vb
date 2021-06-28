@@ -128,7 +128,7 @@ Public Class Form2
 
             ''''''' DATA VALIDATION - END
         Else
-            Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\DRIVING-SCHOOL-MANAGEMENT\Driving School Management\Driving School Management\Database0.mdf;Integrated Security=True"
+            Dim constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database0.mdf;Integrated Security=True"
             con = New SqlConnection(constring)
             con.Open()
             cmd.Connection = con
